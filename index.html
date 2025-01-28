@@ -10,14 +10,12 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="icon" href="{{ URL::asset('assets/logo.png') }}" type="image/x-icon"/>
+    <link rel="icon" href="images/logo.png" type="image/x-icon"/>
     <!-- Link Icon -->
-    <meta property="og:image" content="{{ URL::asset('assets/logo.png') }}"/>
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta property="og:image" content="images/logo.png"/>
     <!-- Styles & JS -->
-    <link rel="stylesheet" href="{{ asset('app.css') }}">
-    <script type="text/javascript" src="{{ asset('app.js') }}"></script>
+    <link rel="stylesheet" href="app.css">
+    <script type="text/javascript" src="'app.js"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -57,35 +55,6 @@
 </style>
 
 <body class="antialiased" id="welcome-background-image" style="min-height: 100vh;">
-    <div class="overflow-sizing">
-        @if (Route::has('login'))
-            <div class="row col-12 mx-auto justify-content-center">
-                <div class="row col-auto mx-auto py-3 justify-content-center">
-                    @auth
-                        <a href="{{ url('/home') }}" style="width: 150px;"
-                            class="text-center glass glass-hover rainbow-box-shadow-keyframe mb-2 col-auto p-3 mx-3"><span
-                                style="text-shadow: 0px 0px 15px #000;">Home</span>
-                        </a>
-                    @else
-                        <a href="{{ route('login') }}" style="width: 150px;"
-                            class="text-center glass glass-hover rainbow-box-shadow-keyframe mb-2 col-auto p-3 mx-3"><span
-                                style="text-shadow: 0px 0px 15px #000;">Log in</span>
-                        </a>
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" style="width: 150px;"
-                                class="text-center glass glass-hover rainbow-box-shadow-keyframe mb-2 col-auto p-3 mx-3"><span
-                                    style="text-shadow: 0px 0px 15px #000;">Register</span>
-                            </a>
-                        @endif
-                    @endauth
-                </div>
-            </div>
-        @endif
-        <div class="row col-12 mx-auto p-0 text-center mb-3">
-            <div class="dark-blue-transparent-background rounded card text-white col-auto mx-auto">
-                Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-            </div>
-        </div>
         <div class="container backdrop-blur dark-blue-transparent-background py-3 rounded mb-5 border border-light text-white">
             <div class="row col-md-12 mx-auto text-center">
                 <h3>Garth Baker CV & Contact Info</h3>
