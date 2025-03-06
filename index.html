@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="theme-color" content="#5dacbd" />
-    <title>Garth B Portfolio</title>
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net" />
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet" />
-    <!-- Favicon -->
-    <link rel="icon" href="images/logo.png" type="image/x-icon" />
-    <!-- Link Icon -->
-    <meta property="og:image" content="images/logo.png" />
-    <!-- Styles & JS -->
-    <link rel="stylesheet" href="app.css" />
-    <script type="text/javascript" src="app.js"></script>
+    <title>Garth B – CV &amp; Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-/xUj+3OJ+5zqD34SdExrN2TTyOwGmZ+4y1iz2jRkMo0="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
 
     <!-- Font Awesome -->
     <link
@@ -24,666 +36,644 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
-      async
-    ></script>
-    <!-- Recaptcha -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+
+    <!-- Optional: your custom CSS (rename “app.css” if desired) -->
+    <!--
+    <link rel="stylesheet" href="app.css" />
+    -->
+
+    <style>
+      body {
+        background: #092235; /* Subtle dark background */
+        color: #fff; /* White text for better contrast */
+        font-family: "Nunito", sans-serif;
+      }
+
+      /* Transparent card backgrounds */
+      .dark-card {
+        background-color: rgba(0, 0, 0, 0.3);
+        border: 1px solid #fff;
+      }
+
+      /* Headings with light text shadow for subtle emphasis */
+      h1, h2, h3, h4 {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Progress Bars */
+      .progress {
+        height: 24px;
+      }
+      .progress-bar {
+        font-weight: bold;
+      }
+
+      /* Adjust the “Print to PDF” button in print view */
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        body {
+          background-color: #fff !important;
+          color: #000 !important;
+        }
+        .dark-card {
+          background-color: #fff !important;
+          color: #000 !important;
+          border: 1px solid #ccc !important;
+        }
+        .progress {
+          border: 1px solid #bbb !important;
+        }
+      }
+    </style>
   </head>
 
-  <style>
-    .info-box {
-      position: relative;
-    }
+  <body>
+    <!-- Top Section / PDF Button -->
+    <div class="container py-3">
+      <div class="d-flex justify-content-center my-3">
+        <!-- Option 1: Print (makes a PDF in browser) -->
+        <button
+          onclick="window.print()"
+          class="btn btn-success shadow no-print"
+          title="Print this page to PDF"
+        >
+          <i class="fa fa-file-pdf"></i> Print / Save as PDF
+        </button>
 
-    .floating-back-icon {
-      color: #7bc7ff;
-      position: absolute;
-      width: max-content;
-      padding: 0;
-      text-shadow: 1px 1px 5px #00696e;
-      font-size: 75px;
-      top: 15px;
-      right: -250px;
-      transition: right 0.5s ease;
-    }
-
-    .cta-heading {
-      text-shadow: -0.5px 0.5px 3px #000;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    .overflow-sizing {
-      max-height: 100vh;
-      overflow-y: auto;
-    }
-  </style>
-
-  <body
-    class="antialiased"
-    id="welcome-background-image"
-    style="min-height: 100vh"
-  >
-    <br /><br />
-    <div class="row col-12 p-0 mx-auto justify-content-center mb-4">
-      <a href="/13garth-github-io-....pdf" download class="btn btn-success col-auto mx-auto border border-light">
-        Download PDF
-      </a>
+        <!-- Option 2: Direct Download Link (replace with actual .pdf if desired) 
+        <a
+          href="13garth-github-io-....pdf"
+          download
+          class="btn btn-success shadow no-print ms-2"
+        >
+          <i class="fa fa-download"></i> Download PDF
+        </a>
+        -->
+      </div>
     </div>
+
     <!-- Contact Information Section -->
-    <div
-      class="container backdrop-blur dark-blue-transparent-background py-3 rounded mb-5 border border-light text-white"
-    >
-      <div class="row col-md-12 mx-auto text-center">
-        <h3>Garth B – CV & Contact Details</h3>
-        <br />
-        <small>
-          Thank you for taking the time to review my CV.<br>
-          I appreciate your consideration and hope you find this summary both informative and engaging.
-        </small>
-        <hr class="my-2" />
-      </div>
-      <div class="row col-md-12 mx-auto">
-        <div class="col-md-4">
-          <i class="fa fa-envelope"></i> Email |
-          <i class="fa fa-phone"></i> Cell
-          <hr class="my-2" />
-          <a
-            class="text-light"
-            href="mailto:13garthbaker@gmail.com"
-            target="_blank"
-            >13garthbaker@gmail.com</a
-          >
-          <br />
-          <a class="text-light" href="tel:+31684002167" target="_blank"
-            >(+31 / 0) 68 400 2167</a
-          >
-        </div>
-        <div class="col-md-4">
-          <i class="fa-brands fa-github"></i> GitHub
-          <hr class="my-2" />
-          <a
-            class="text-light"
-            href="https://github.com/13garth"
-            target="_blank"
-            >github.com/13garth</a
-          >
-        </div>
-        <div class="col-md-4">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
-          <hr class="my-2" />
-          <a
-            class="text-light"
-            href="https://www.linkedin.com/in/13garth/"
-            target="_blank"
-            >linkedin.com/in/13garth</a
-          >
-        </div>
-      </div>
-    </div>
-
-    <!-- Professional Experience & Learning -->
-    <div
-      class="container backdrop-blur dark-blue-transparent-background py-3 rounded mb-5 border border-light"
-    >
-      <div class="row col-12 mx-auto p-0">
-        <h1 class="text-white text-center">
-          Professional Experience & Development
-        </h1>
-        <hr class="text-white" />
-        <!-- Left Column: Skills & Progress Bars -->
-        <div class="col-md-3" id="technical-knowledge">
-          <div class="row col-12 mx-auto justify-content-center py-4">
-            <img
-              src="images/logo.png"
-              id="site-logo"
-              alt="Portfolio Logo"
-              style="width: 200px"
-            />
-          </div>
-          <p class="text-white">
-            I am a dynamic Full Stack Developer with a career that began in
-            2016. I specialize in crafting custom, responsive solutions to meet
-            unique client needs. Originally from South Africa, I bring a global
-            perspective to the tech landscape.
+    <section class="container mb-4">
+      <div class="dark-card p-4 rounded">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold">Garth B – CV &amp; Contact Details</h2>
+          <p class="mb-0">
+            Thank you for taking the time to review my CV. <br />
+            I appreciate your consideration and hope you find this summary both
+            informative and engaging.
           </p>
-          <ul class="text-white list-unstyled">
-            <li class="p-1">
-              <label style="font-weight: bold">Laravel Ecosystem</label>
-              <div class="progress border">
-                <div
-                  class="bg-success progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="85"
-                  aria-valuenow="85"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  85%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">Laravel Blade Templating</label>
-              <div class="progress border">
-                <div
-                  class="bg-success progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="95"
-                  aria-valuenow="95"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  95%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">PHP (Latest Versions)</label>
-              <div class="progress border">
-                <div
-                  class="bg-success progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="95"
-                  aria-valuenow="95"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  95%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">jQuery</label>
-              <div class="progress border">
-                <div
-                  class="bg-success progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="85"
-                  aria-valuenow="85"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  85%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">CSS</label>
-              <div class="progress border">
-                <div
-                  class="bg-success progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="95"
-                  aria-valuenow="95"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  95%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">Bootstrap</label>
-              <div class="progress border">
-                <div
-                  class="bg-success progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="95"
-                  aria-valuenow="95"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  95%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold"
-                >Git & GitHub (incl. Actions)</label
-              >
-              <div class="progress border">
-                <div
-                  class="bg-success progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="80"
-                  aria-valuenow="80"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  80%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold"
-                >MySQL (Relational Databases)</label
-              >
-              <div class="progress border">
-                <div
-                  class="bg-primary progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="75"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  75%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">Vue.js</label>
-              <div class="progress border">
-                <div
-                  class="bg-primary progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="70"
-                  aria-valuenow="70"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  70%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">JavaScript</label>
-              <div class="progress border">
-                <div
-                  class="bg-primary progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="65"
-                  aria-valuenow="65"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  65%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">GIMP (Graphic Design)</label>
-              <div class="progress border">
-                <div
-                  class="bg-primary progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="65"
-                  aria-valuenow="65"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  65%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold"
-                >Flutter & Dart (iOS / Android)</label
-              >
-              <div class="progress border">
-                <div
-                  class="bg-primary progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="60"
-                  aria-valuenow="60"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  60%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">Figma</label>
-              <div class="progress border">
-                <div
-                  class="bg-primary progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="60"
-                  aria-valuenow="60"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  60%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">WordPress</label>
-              <div class="progress border">
-                <div
-                  class="bg-success progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="95"
-                  aria-valuenow="95"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  95%
-                </div>
-              </div>
-            </li>
-            <li class="p-1">
-              <label style="font-weight: bold">HTML</label>
-              <div class="progress border">
-                <div
-                  class="bg-success progress-bar progress-bar-striped progress-bar-animated p-2"
-                  role="progressbar"
-                  style="width: 0%"
-                  data-width="99"
-                  aria-valuenow="99"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  99%
-                </div>
-              </div>
-            </li>
-          </ul>
+          <hr />
         </div>
+        <div class="row text-center text-md-start">
+          <div class="col-md-4 mb-3">
+            <h5 class="fw-bold">
+              <i class="fa fa-envelope"></i> Email |
+              <i class="fa fa-phone"></i> Cell
+            </h5>
+            <hr class="my-2" />
+            <p>
+              <a
+                class="text-decoration-none text-light"
+                href="mailto:13garthbaker@gmail.com"
+                >13garthbaker@gmail.com</a
+              ><br />
+              <a
+                class="text-decoration-none text-light"
+                href="tel:+31684002167"
+                >(+31 / 0) 68 400 2167</a
+              >
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5 class="fw-bold">
+              <i class="fa-brands fa-github"></i> GitHub
+            </h5>
+            <hr class="my-2" />
+            <p>
+              <a
+                class="text-decoration-none text-light"
+                href="https://github.com/13garth"
+                target="_blank"
+                >github.com/13garth</a
+              >
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5 class="fw-bold">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </h5>
+            <hr class="my-2" />
+            <p>
+              <a
+                class="text-decoration-none text-light"
+                href="https://www.linkedin.com/in/13garth/"
+                target="_blank"
+                >linkedin.com/in/13garth</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Right Column: Work History & Highlights -->
-        <div class="col-md-9">
-          <div class="card p-2 dark-blue-transparent-background text-white">
-            <div class="alert alert-info">
-              <h3>CoverWeb</h3>
+    <!-- Professional Experience & Development -->
+    <section class="container mb-4">
+      <div class="dark-card p-4 rounded">
+        <h1 class="text-center fw-bold mb-4">
+          Professional Experience &amp; Development
+        </h1>
+        <div class="row">
+          <!-- Skills & Profile -->
+          <div class="col-md-3">
+            <div class="text-center mb-4">
+              <img
+                src="images/logo.png"
+                alt="Portfolio Logo"
+                style="max-width: 180px;"
+                class="img-fluid"
+              />
+            </div>
+            <p>
+              I am a dynamic Full Stack Developer with a career that began in
+              2016. I specialize in crafting custom, responsive solutions to
+              meet unique client needs. Originally from South Africa, I bring a
+              global perspective to the tech landscape.
+            </p>
+
+            <!-- Skill Progress Bars -->
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <strong>Laravel Ecosystem</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                    role="progressbar"
+                    data-width="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    85%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>Laravel Blade Templating</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                    role="progressbar"
+                    data-width="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    95%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>PHP (Latest Versions)</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                    role="progressbar"
+                    data-width="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    95%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>jQuery</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                    role="progressbar"
+                    data-width="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    85%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>CSS</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                    role="progressbar"
+                    data-width="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    95%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>Bootstrap</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                    role="progressbar"
+                    data-width="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    95%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>Git &amp; GitHub (incl. Actions)</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                    role="progressbar"
+                    data-width="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    80%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>MySQL (Relational Databases)</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                    role="progressbar"
+                    data-width="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    75%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>Vue.js</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                    role="progressbar"
+                    data-width="70"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    70%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>JavaScript</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                    role="progressbar"
+                    data-width="65"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    65%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>GIMP (Graphic Design)</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                    role="progressbar"
+                    data-width="65"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    65%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>Flutter &amp; Dart (iOS / Android)</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                    role="progressbar"
+                    data-width="60"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    60%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>Figma</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                    role="progressbar"
+                    data-width="60"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    60%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>WordPress</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                    role="progressbar"
+                    data-width="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    95%
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <strong>HTML</strong>
+                <div class="progress border">
+                  <div
+                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                    role="progressbar"
+                    data-width="99"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    99%
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Work History & Highlights -->
+          <div class="col-md-9">
+            <!-- CoverWeb -->
+            <div class="alert alert-info text-dark my-2">
+              <h3 class="fw-bold">CoverWeb</h3>
               <hr />
-              <strong>
-                <i
-                  style="font-size: 25px"
-                  class="fa-brands fa-android text-success"
-                ></i>
-                DigiData Systems – Flutter & Dart App
+              <strong class="d-block mb-2">
+                <i class="fa-brands fa-android text-success me-2" style="font-size: 1.2em;"></i>
+                DigiData Systems – Flutter &amp; Dart App
               </strong>
               <ul>
                 <li>
-                  Led end-to-end development using Flutter & Dart, including
+                  Led end-to-end development using Flutter &amp; Dart, including
                   deployments via the Google Play Console and Android Studio.
                 </li>
               </ul>
               <hr />
-              <strong>
-                <i
-                  style="font-size: 25px"
-                  class="fa-brands fa-laravel text-danger"
-                ></i>
+              <strong class="d-block mb-2">
+                <i class="fa-brands fa-laravel text-danger me-2" style="font-size: 1.2em;"></i>
                 Qinisa Events – Full Stack Development
               </strong>
               <ul>
                 <li>
-                  Responsible for PHP (Laravel), CSS, MySQL, jQuery &
+                  Responsible for PHP (Laravel), CSS, MySQL, jQuery &amp;
                   JavaScript.
                 </li>
               </ul>
               <hr />
-              <strong>
-                <i
-                  style="font-size: 25px"
-                  class="fa-brands fa-wordpress text-primary"
-                ></i>
+              <strong class="d-block mb-2">
+                <i class="fa-brands fa-wordpress text-primary me-2" style="font-size: 1.2em;"></i>
                 ALT Agency – WordPress Development
               </strong>
               <ul>
                 <li>
-                  Development using PHP, WordPress, CSS, MySQL, jQuery &
+                  Development using PHP, WordPress, CSS, MySQL, jQuery &amp;
                   JavaScript. Also contributed to UI design and new feature
                   implementation.
                 </li>
               </ul>
               <hr />
-              <strong> Independent Projects Under CoverWeb </strong>
+              <strong>Independent Projects Under CoverWeb</strong>
               <p>
-                These are full end-to-end initiatives where I managed everything
-                from initial client consultations and wireframes to final
-                development, testing, and invoicing.
+                Full end-to-end initiatives (client consultations, wireframes,
+                development, testing, invoicing).
               </p>
               <ol>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-wordpress text-primary"
-                  ></i>
+                  <i class="fa-brands fa-wordpress text-primary me-2"></i>
                   Dymaxa |
                   <a href="https://dymaxa.co.za/" target="_blank"
-                    >https://dymaxa.co.za</a
+                    >dymaxa.co.za</a
                   >
                 </li>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-wordpress text-primary"
-                  ></i>
+                  <i class="fa-brands fa-wordpress text-primary me-2"></i>
                   CraftiNess |
                   <a href="https://craftiness.co.za/" target="_blank"
-                    >https://craftiness.co.za</a
+                    >craftiness.co.za</a
                   >
                 </li>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-laravel text-danger"
-                  ></i>
+                  <i class="fa-brands fa-laravel text-danger me-2"></i>
                   CoverWeb |
                   <a href="https://coverweb.online/" target="_blank"
-                    >https://coverweb.online</a
+                    >coverweb.online</a
                   >
                 </li>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-wordpress text-primary"
-                  ></i>
+                  <i class="fa-brands fa-wordpress text-primary me-2"></i>
                   DJ Rave-n8er |
                   <a href="https://rave-n8er.com/" target="_blank"
-                    >https://rave-n8er.com</a
+                    >rave-n8er.com</a
                   >
                 </li>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-laravel text-danger"
-                  ></i>
+                  <i class="fa-brands fa-laravel text-danger me-2"></i>
                   Budget Kicker |
                   <a href="https://budgetkicker.com/" target="_blank"
-                    >https://budgetkicker.com</a
+                    >budgetkicker.com</a
                   >
                 </li>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-wordpress text-primary"
-                  ></i>
+                  <i class="fa-brands fa-wordpress text-primary me-2"></i>
                   Garth Baker Blog |
                   <a href="https://garthbaker.co.za/" target="_blank"
-                    >https://garthbaker.co.za</a
+                    >garthbaker.co.za</a
                   >
                 </li>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-wordpress text-primary"
-                  ></i>
+                  <i class="fa-brands fa-wordpress text-primary me-2"></i>
                   Dolk Consulting |
                   <a href="https://dolkconsulting.co.za/" target="_blank"
-                    >https://dolkconsulting.co.za</a
+                    >dolkconsulting.co.za</a
                   >
                 </li>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-laravel text-danger"
-                  ></i>
+                  <i class="fa-brands fa-laravel text-danger me-2"></i>
                   13garth.github.io |
                   <a href="https://13garth.github.io/" target="_blank"
-                    >https://13garth.github.io/</a
+                    >13garth.github.io</a
                   >
                 </li>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-wordpress text-primary"
-                  ></i>
+                  <i class="fa-brands fa-wordpress text-primary me-2"></i>
                   The Waiting Room |
                   <a href="https://the-waitingroom.org/" target="_blank"
-                    >https://the-waitingroom.org</a
+                    >the-waitingroom.org</a
                   >
                 </li>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-wordpress text-primary"
-                  ></i>
-                  Forward for Life & Common Unity |
+                  <i class="fa-brands fa-wordpress text-primary me-2"></i>
+                  Forward for Life &amp; Common Unity |
                   <a href="https://cuffl.org/" target="_blank"
-                    >https://cuffl.org</a
+                    >cuffl.org</a
                   >
                 </li>
                 <li class="mb-2">
-                  <i
-                    style="font-size: 25px"
-                    class="fa-brands fa-wordpress text-primary"
-                  ></i>
+                  <i class="fa-brands fa-wordpress text-primary me-2"></i>
                   Penny Farthing Music Studio |
-                  <a
-                    href="https://pennyfarthingmusicstudio.com/"
-                    target="_blank"
-                    >https://pennyfarthingmusicstudio.com</a
+                  <a href="https://pennyfarthingmusicstudio.com/" target="_blank"
+                    >pennyfarthingmusicstudio.com</a
                   >
                 </li>
                 <li class="mb-2"><strong>...</strong></li>
               </ol>
             </div>
 
-            <div class="alert alert-info">
-              <span class="text-white bg-success p-1 rounded"
-                ><i class="fa fa-star"></i> Letter of Recommendation
-                Available</span
-              >
-              <h3>E-Centive</h3>
-              <strong>1 Year 6 Months</strong><br />
-              As a Full Stack Engineer and Flutter App Developer, I gained
-              valuable experience in mobile app development, DevOps, and Amazon
-              Web Services (AWS). This role showcased my ability to integrate
-              diverse technologies seamlessly.
+            <!-- E-Centive -->
+            <div class="alert alert-info text-dark my-2">
+              <span class="badge bg-success me-2">
+                <i class="fa fa-star"></i> Letter of Recommendation Available
+              </span>
+              <h3 class="fw-bold d-inline">E-Centive</h3>
+              <div class="mt-2">
+                <strong>Duration:</strong> 1 Year 6 Months
+              </div>
+              <p class="mt-2 mb-1">
+                As a Full Stack Engineer and Flutter App Developer, I gained
+                valuable experience in mobile app development, DevOps, and AWS.
+                This role showcased my ability to integrate diverse
+                technologies seamlessly.
+              </p>
               <hr />
               <img
                 src="images/letters-of-rec/e-centive.png"
                 alt="E-Centive Letter of Recommendation"
-                style="max-width: 100%"
+                class="img-fluid border"
               />
             </div>
 
-            <div class="alert alert-info">
-              <span class="text-white bg-success p-1 rounded"
-                ><i class="fa fa-star"></i> Letter of Recommendation
-                Available</span
-              >
-              <h3>Imagin8</h3>
-              <strong>7 Months (Retrenched)</strong><br />
-              Served as a junior-to-intermediate Full Stack Engineer, laying the
-              groundwork for SMExpert.co.za. This high-pressure environment
-              sharpened my project management skills and solidified my technical
-              foundation.
+            <!-- Imagin8 -->
+            <div class="alert alert-info text-dark my-2">
+              <span class="badge bg-success me-2">
+                <i class="fa fa-star"></i> Letter of Recommendation Available
+              </span>
+              <h3 class="fw-bold d-inline">Imagin8</h3>
+              <div class="mt-2">
+                <strong>Duration:</strong> 7 Months (Retrenched)
+              </div>
+              <p class="mt-2 mb-1">
+                Served as a junior-to-intermediate Full Stack Engineer, laying
+                the groundwork for SMExpert.co.za. This high-pressure
+                environment sharpened my project management skills and
+                solidified my technical foundation.
+              </p>
               <hr />
               <img
                 src="images/letters-of-rec/trajectory.png"
                 alt="Imagin8 Letter of Recommendation"
-                style="max-width: 100%"
+                class="img-fluid border"
               />
             </div>
 
-            <div class="alert alert-info">
-              <h3>Clientele Limited</h3>
-              <strong>2 Years</strong><br />
-              Hired as a junior OutSystems Developer for Clientele Life’s
-              websites, I was the sole developer responsible for building and
-              maintaining OutSystems-based web solutions. During this time, I
-              deepened my knowledge of REST APIs and user interface design.
+            <!-- Clientele Limited -->
+            <div class="alert alert-info text-dark my-2">
+              <h3 class="fw-bold">Clientele Limited</h3>
+              <div class="mt-2">
+                <strong>Duration:</strong> 2 Years
+              </div>
+              <p class="mt-2 mb-0">
+                Hired as a junior OutSystems Developer for Clientele Life’s
+                websites, I was the sole developer responsible for building and
+                maintaining OutSystems-based web solutions. During this time, I
+                deepened my knowledge of REST APIs and user interface design.
+              </p>
             </div>
 
-            <div class="alert alert-info">
-              <span class="text-white bg-success p-1 rounded"
-                ><i class="fa fa-star"></i> Letter of Recommendation
-                Available</span
-              >
-              <h3>WebFootprint</h3>
-              <strong>1 Year 8 Months</strong><br />
-              Starting as an intern and evolving into a Junior Full Stack
-              Engineer, I worked on customized web development projects
-              involving PHP, WordPress, and Laravel. This role gave me a solid
-              grounding in both front-end and back-end development.
+            <!-- WebFootprint -->
+            <div class="alert alert-info text-dark my-2">
+              <span class="badge bg-success me-2">
+                <i class="fa fa-star"></i> Letter of Recommendation Available
+              </span>
+              <h3 class="fw-bold d-inline">WebFootprint</h3>
+              <div class="mt-2">
+                <strong>Duration:</strong> 1 Year 8 Months
+              </div>
+              <p class="mt-2 mb-1">
+                Starting as an intern and evolving into a Junior Full Stack
+                Engineer, I worked on customized web development projects
+                involving PHP, WordPress, and Laravel. This role gave me a solid
+                grounding in both front-end and back-end development.
+              </p>
               <hr />
               <img
                 src="images/letters-of-rec/webfootprint.png"
                 alt="WebFootprint Letter of Recommendation"
-                style="max-width: 100%"
+                class="img-fluid border"
               />
             </div>
 
-            <div class="alert alert-info">
-              <h3>Technical Knowledge & Personal Growth</h3>
+            <!-- Summary of Growth -->
+            <div class="alert alert-info text-dark my-2">
+              <h3 class="fw-bold">Technical Knowledge &amp; Personal Growth</h3>
               <p>
                 I am primarily self-taught, expanding my skill set through
                 hands-on experience, platforms like YouTube and Udemy, and
-                continuous problem-solving. Since I matriculated in 2015, I have
+                continuous problem-solving. Since matriculating in 2015, I have
                 remained dedicated to learning and improving across various web
                 development technologies.
               </p>
               <hr />
-              <h2>Entrepreneurial Drive & Continuous Learning</h2>
+              <h4>Entrepreneurial Drive &amp; Continuous Learning</h4>
               <p>
-                My entrepreneurial venture, <strong>CoverWeb</strong>, provides
-                hosting and development services to small businesses. This
-                pursuit keeps me up-to-date with cutting-edge tools, best
-                practices, and the latest industry trends.
+                My venture, <strong>CoverWeb</strong>, provides hosting and
+                development services to small businesses. I manage every aspect
+                of these projects—from inception and design to development and
+                maintenance—reflecting my capacity to deliver end-to-end
+                solutions on time and on budget.
               </p>
-              <p>
-                I manage every aspect of these projects—from inception and
-                design to development and maintenance. They reflect my capacity
-                to oversee end-to-end solutions, ensuring quality and timely
-                delivery for clients.
+              <p class="alert alert-secondary p-2">
+                <a href="https://coverweb.online" class="text-dark" target="_blank"
+                  >CoverWeb.online</a
+                >
+                |
+                <a href="https://budgetkicker.com" class="text-dark" target="_blank"
+                  >BudgetKicker.com</a
+                >
+                |
+                <a href="https://garthbaker.co.za" class="text-dark" target="_blank"
+                  >GarthBaker.co.za</a
+                >
+                |
+                <a
+                  href="https://g-portfolio.garthbaker.co.za"
+                  class="text-dark"
+                  target="_blank"
+                  >GPortfolio.garthbaker.co.za</a
+                >
               </p>
-              <div class="row col-12 mx-auto p-0">
-                <p class="m-0 alert alert-info p-1 mt-1">
-                  <a href="https://coverweb.online" target="_blank"
-                    >CoverWeb.online</a
-                  >
-                  |
-                  <a href="https://budgetkicker.com" target="_blank"
-                    >BudgetKicker.com</a
-                  >
-                  |
-                  <a href="https://garthbaker.co.za" target="_blank"
-                    >GarthBaker.co.za</a
-                  >
-                  |
-                  <a href="https://g-portfolio.garthbaker.co.za" target="_blank"
-                    >GPortfolio.garthbaker.co.za</a
-                  >
-                </p>
-              </div>
-              <h3>Summary</h3>
-              <p>
+              <h4>Summary</h4>
+              <p class="mb-0">
                 My extensive project experience demonstrates my versatility,
-                dedication, and passion for continuous improvement. Combining
-                self-driven learning with practical, real-world application, I
+                dedication, and passion for continuous improvement. By
+                combining self-driven learning with practical application, I
                 strive to deliver high-quality solutions that meet both client
                 and end-user needs.
               </p>
@@ -691,55 +681,47 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Problem Solving Examples -->
-    <div
-      class="container backdrop-blur dark-blue-transparent-background py-3 rounded mb-5 border border-light"
-    >
-      <div class="row col-12 mx-auto p-0">
-        <h1 class="text-white text-center">Problem Solving in Action</h1>
-        <hr class="text-white" />
+    <section class="container mb-5">
+      <div class="dark-card p-4 rounded">
+        <h1 class="fw-bold text-center mb-4">Problem Solving in Action</h1>
 
         <!-- Example 1: Seating Data Interface -->
-        <div class="card dark-blue-transparent-background text-white p-0 mb-3">
-          <div class="row col-12 mx-auto p-2">
+        <div class="card mb-3 dark-card p-3">
+          <div class="row g-0">
             <div class="col-md-2">
-              <h4>Challenge:</h4>
-              Develop an interactive seating interface that visualizes seat
-              assignments for better management of guest data.
+              <h5 class="mb-2">Challenge:</h5>
+              <p class="mb-0">
+                Develop an interactive seating interface that visualizes seat
+                assignments for better management of guest data.
+              </p>
             </div>
             <div class="col-md-10">
-              <h3>Solution Approach</h3>
+              <h4 class="fw-bold">Solution Approach</h4>
               <ol>
-                <li>Clearly define the user needs and requirements.</li>
+                <li>Clearly define user needs and requirements.</li>
                 <li>
-                  Identify various implementation methods, along with their pros
-                  and cons.
+                  Identify possible implementation methods, with pros &amp; cons.
                 </li>
+                <li>Research solutions and map them to requirements.</li>
                 <li>
-                  Research feasible solutions and map them to the identified
-                  requirements.
-                </li>
-                <li>
-                  I chose an HTML Canvas solution for its flexibility and
-                  dynamic rendering capabilities. By uploading a venue’s seating
-                  plan as an image and overlaying a drag-and-drop system, event
-                  managers can visually place and adjust seating markers. The
-                  interface is:
+                  Chose an HTML Canvas approach for flexibility and dynamic
+                  rendering. By uploading a venue’s plan as an image and using a
+                  drag-and-drop overlay, event managers can visually place seat
+                  markers:
                   <ul>
-                    <li>Highly customizable for different events.</li>
-                    <li>Reusable for future seating layouts.</li>
+                    <li>Highly customizable</li>
+                    <li>Reusable for different layouts</li>
                     <li>
-                      Designed as an add-on library, simplifying future
-                      enhancements without major rewrites.
+                      Designed as an add-on library for easy future enhancements
                     </li>
                   </ul>
                   <img
                     src="images/seating-preview.png"
                     alt="Seating Preview"
-                    class="rounded"
-                    style="max-width: 100%"
+                    class="img-fluid rounded border mt-2"
                   />
                 </li>
               </ol>
@@ -748,70 +730,51 @@
         </div>
 
         <!-- Example 2: Command Prompt Dominoes Game -->
-        <div class="card dark-blue-transparent-background text-white p-0 mb-3">
-          <div class="row col-12 mx-auto p-2">
+        <div class="card mb-3 dark-card p-3">
+          <div class="row g-0">
             <div class="col-md-2">
-              <h4>Challenge:</h4>
-              Create a command-line game of Dominoes with simplified rules.
+              <h5 class="mb-2">Challenge:</h5>
+              <p class="mb-0">
+                Create a command-line game of Dominoes with simplified rules.
+              </p>
             </div>
             <div class="col-md-10">
-              <h3>Solution Approach</h3>
+              <h4 class="fw-bold">Solution Approach</h4>
               <ol>
                 <li>Define the custom rules and objectives of the game.</li>
                 <li>Break down potential implementation strategies.</li>
                 <li>
-                  Research how to manage turn-taking, tile distribution, and
-                  scoring logic.
+                  Research how to handle turn-taking, tile distribution, scoring
+                  logic.
                 </li>
                 <li>
-                  Used PHP arrays to represent domino tiles, applying game logic
-                  to simulate play. The modified rules allow players to place
-                  tiles only on the left or right end of a linear board; the
-                  first player to place all tiles wins.
+                  Used PHP arrays to represent domino tiles and apply game
+                  logic. Modified rules allow placement only at the ends of a
+                  linear board; the first player to place all tiles wins.
                 </li>
               </ol>
-              <ul>
-                <li>
-                  Each run of the game is unique due to random tile
-                  distribution:
-                  <br />
-                  <img
-                    src="images/dominoes-game.png"
-                    alt="CMD Dominoes"
-                    class="rounded"
-                    style="max-width: 100%"
-                  />
-                </li>
-              </ul>
+              <p class="mb-0">
+                Each run is unique due to random tile distribution:
+              </p>
+              <img
+                src="images/dominoes-game.png"
+                alt="CMD Dominoes"
+                class="img-fluid rounded border mt-2"
+              />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Script for Progress Bars & Hover Effect -->
+    <!-- jQuery Script for Progress Bars -->
     <script>
       $(document).ready(function () {
-        $(".info-box").hover(
-          function () {
-            $(this).find(".floating-back-icon").css("right", "25px");
-          },
-          function () {
-            $(this).find(".floating-back-icon").css("right", "-250px");
-          }
-        );
-
-        // Animate progress bars
+        // Animate progress bars on page load
         $(".progress-bar").each(function () {
-          var width = $(this).data("width");
-          $(this)
-            .css("width", "0%")
-            .animate(
-              {
-                width: width + "%",
-              },
-              1000
-            );
+          var $this = $(this);
+          var finalWidth = $this.data("width");
+          $this.css("width", "0%").animate({ width: finalWidth + "%" }, 1000);
         });
       });
     </script>
