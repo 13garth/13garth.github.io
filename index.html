@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#5dacbd" />
     <title>Garth B – CV &amp; Portfolio</title>
 
-    <!-- jQuery (must load before Bootstrap if you want to use jQuery features) -->
+    <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
       integrity="sha256-/xUj+3OJ+5zqD34SdExrN2TTyOwGmZ+4y1iz2jRkMo0="
@@ -38,28 +38,28 @@
     <link rel="icon" href="images/logo.png" type="image/x-icon" />
 
     <style>
-      /* Overall background: light gray for “document” style */
+      /* Dark background so the white A4 container stands out */
       body {
-        background-color: #f0f0f0;
+        background-color: #1c1c1c;
         margin: 0;
         padding: 0;
         font-family: "Nunito", sans-serif;
-        color: #000; /* Default text color: black */
+        color: #000; /* Use black text in the main content */
       }
 
       /* 
-         A4 Container to mimic a “page” 
-         - Centered in browser
+         A4 Container 
          - White background
-         - Shadow for slight separation
+         - Shadow for slight separation 
+         - Centered in the browser
       */
       .a4-container {
         width: 210mm;             /* A4 width */
         min-height: 297mm;        /* A4 height */
-        margin: 20px auto;        /* Center the “page” in the browser */
-        background-color: #fff;   /* White page */
+        margin: 20px auto;        /* Center the page in the browser */
+        background-color: #fff;   /* White document */
         padding: 30px 40px;       /* Roomy padding */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
 
       /* Force the print size to A4 and unify margins */
@@ -88,15 +88,6 @@
           display: none !important;
         }
       }
-
-      /* Progress bars styling */
-      .progress {
-        height: 24px;
-        background-color: #ddd;
-      }
-      .progress-bar {
-        font-weight: bold;
-      }
     </style>
   </head>
 
@@ -114,7 +105,6 @@
 
     <!-- Main A4 Page Container -->
     <div class="a4-container">
-
       <!-- Contact Information Section -->
       <section class="mb-4">
         <div class="text-center mb-3">
@@ -204,218 +194,23 @@
               a global perspective to the tech landscape.
             </p>
 
-            <!-- Skill Progress Bars -->
+            <!-- Skills List -->
+            <h5 class="fw-bold mt-4">Technical Skills</h5>
             <ul class="list-unstyled">
-              <li class="mb-3">
-                <strong>Laravel Ecosystem</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                    role="progressbar"
-                    data-width="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    85%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>Laravel Blade Templating</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                    role="progressbar"
-                    data-width="95"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    95%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>PHP (Latest Versions)</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                    role="progressbar"
-                    data-width="95"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    95%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>jQuery</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                    role="progressbar"
-                    data-width="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    85%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>CSS</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                    role="progressbar"
-                    data-width="95"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    95%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>Bootstrap</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                    role="progressbar"
-                    data-width="95"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    95%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>Git &amp; GitHub (incl. Actions)</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                    role="progressbar"
-                    data-width="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    80%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>MySQL (Relational Databases)</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-                    role="progressbar"
-                    data-width="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    75%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>Vue.js</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-                    role="progressbar"
-                    data-width="70"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    70%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>JavaScript</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-                    role="progressbar"
-                    data-width="65"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    65%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>GIMP (Graphic Design)</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-                    role="progressbar"
-                    data-width="65"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    65%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>Flutter &amp; Dart (iOS / Android)</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-                    role="progressbar"
-                    data-width="60"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    60%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>Figma</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-                    role="progressbar"
-                    data-width="60"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    60%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>WordPress</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                    role="progressbar"
-                    data-width="95"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    95%
-                  </div>
-                </div>
-              </li>
-              <li class="mb-3">
-                <strong>HTML</strong>
-                <div class="progress">
-                  <div
-                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                    role="progressbar"
-                    data-width="99"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    99%
-                  </div>
-                </div>
-              </li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Laravel Ecosystem</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Laravel Blade Templating</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>PHP (Latest Versions)</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>jQuery</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>CSS / Bootstrap</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Git &amp; GitHub (incl. Actions)</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>MySQL (Relational Databases)</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Vue.js</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>JavaScript</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>GIMP (Graphic Design)</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Flutter &amp; Dart</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Figma</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>WordPress</li>
+              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>HTML</li>
             </ul>
           </div>
 
@@ -456,8 +251,7 @@
             <ul>
               <li>
                 Specialized in PHP, WordPress, CSS, MySQL, jQuery, &amp;
-                JavaScript. Also contributed to UI design and new feature
-                implementation.
+                JavaScript. Contributed to UI design and feature implementation.
               </li>
             </ul>
 
@@ -711,16 +505,5 @@
         </div>
       </section>
     </div>
-
-    <!-- Script for Animating Progress Bars -->
-    <script>
-      $(document).ready(function () {
-        $(".progress-bar").each(function () {
-          var $this = $(this);
-          var finalWidth = $this.data("width");
-          $this.css("width", "0%").animate({ width: finalWidth + "%" }, 1000);
-        });
-      });
-    </script>
   </body>
 </html>
