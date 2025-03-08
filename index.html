@@ -63,24 +63,19 @@
       padding: 20px;
     }
 
-    .main-content h2 {
+    /* Headings */
+    .main-content h3 {
       margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.5rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section h3 {
-      margin-bottom: 10px;
       font-size: 1.2rem;
       color: #444;
       border-bottom: 1px solid #ccc;
       padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    /* Sections and paragraphs */
+    .section {
+      margin-bottom: 40px;
     }
 
     .section p {
@@ -93,12 +88,13 @@
       margin-top: 20px;
     }
 
-    /* Optional styling to indicate page breaks in the PDF version (not functional in a browser) */
+    /* Page Breaks */
     .page-break {
       margin: 40px 0;
       border-top: 2px dashed #ccc;
     }
-    /* A4 Container */
+
+    /* A4 Container for print */
     .a4-container {
       width: 210mm;             /* A4 width */
       min-height: 297mm;        /* A4 height */
@@ -134,436 +130,448 @@
   </style>
 </head>
 <body>
-<body>
-<!-- Print Button (only on screen) -->
-<div class="text-center my-3 no-print">
-  <button
-    onclick="window.print()"
-    class="btn btn-success shadow"
-    title="Print this page to PDF"
-  >
-    <i class="fa fa-file-pdf"></i> Print / Save as PDF
-  </button>
-</div>
-<div class="container a4-container">
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <img src="images/logo.png" alt="Logo" />
-
-    <h2>Personalia</h2>
-    <p>
-      <strong>Name:</strong> Garth B.<br>
-      <strong>Email:</strong> 13garthbaker@gmail.com<br>
-      <strong>Phone:</strong> +31684002167<br>
-      <strong>Location:</strong> 1363BX Almere<br>
-      <strong>LinkedIn:</strong> linkedin.com/in/13garth
-    </p>
-
-    <h3>Vaardigheden</h3>
-    <ul>
-      <li>.NET Framework</li>
-      <li>C#</li>
-      <li>Flutter</li>
-      <li>Dart</li>
-      <li>Reporting</li>
-      <li>Documentation</li>
-      <li>MariaDB</li>
-      <li>Web Technologies</li>
-      <li>Learning</li>
-      <li>Team Management</li>
-      <li>JSON</li>
-      <li>Object-Oriented Programming (OOP)</li>
-      <li>Software Development</li>
-      <li>LAMP</li>
-      <li>Web Project Management</li>
-      <li>Programming</li>
-      <li>HTML5</li>
-      <li>Vue.js</li>
-      <li>Amazon Web Services (AWS)</li>
-      <li>Application Architecture</li>
-    </ul>
+  <!-- Print Button (only on screen) -->
+  <div class="text-center my-3 no-print" style="padding: 1rem;">
+    <button
+      onclick="window.print()"
+      style="padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer;"
+      title="Print this page to PDF"
+    >
+      Print / Save as PDF
+    </button>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <div class="main-content">
-    <div class="section">
-      <h2>PAGE 1</h2>
-      <h3>Profiel</h3>
+  <div class="container a4-container">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <img src="images/logo.png" alt="Logo" />
+
+      <h2>Personalia</h2>
       <p>
-        So some specifics of my skill set. And at the bottom a bit about who I am ;) -- 
-        About my environments -- I can work on all operating systems. And dev on them 
-        efficiently. - Windows with IIS or Docker or Apache - Linux with Apache or Docker 
-        - Mac OS with Apache or Docker
+        <strong>Name:</strong> Garth B.<br>
+        <strong>Email:</strong> 13garthbaker@gmail.com<br>
+        <strong>Phone:</strong> +31684002167<br>
+        <strong>Location:</strong> 1363BX Almere<br>
+        <strong>LinkedIn:</strong> linkedin.com/in/13garth
       </p>
-      <p>
-        -- My Syntax Knowledge. -- Laravel, MySQL, CSS, PHP, HTML, Javascript and 
-        Jquery, AWS, Github Actions, Flutter & Dart, WordPress, Server administration on 
-        VPS and Shared hosting services.
-      </p>
-      <p>
-        -- About some of my skills -- AWS hosting and S3 Bucket integration with Github 
-        Actions automated deployment onto AWS VM's and also Flutter and Dart 
-        development and Deployment (F & D is for APP Development) Fastlane (F & D 
-        Tool for deployment) exposure for creating deployments for IOS and Android. (I 
-        do need a bit more time to automate the fastlane process for apps. But I do have 
-        enough experience to likely get there within an additional 3 to 4 weeks of focused 
-        work.) Vue JS (Vue is not my strongest but I have extensive exposure wirth the 
-        framework)
-      </p>
-      <p>
-        -- About Me -- I am a highly passionate full stack engineer (Websites and Flutter 
-        apps) I love what I do and my work speaks for itself.
-      </p>
-      <p>
-        I always aspire to produce quality work and the more I program the better my work 
-        gets.
-      </p>
-      <p>
-        It's been a long road for me, but since the beginning of my development career I 
-        have certainly grown a lot and matured as an individual and programmer. I have 
-        worked in small offices and I have worked in a massive corporate offices and I 
-        have always kept myself open to helping others as much as I can and through this 
-        mentality I have been able to learn from my peers and better myself as a 
-        professional developer.
-      </p>
-      <p>
-        I consistently aim to better my skills and love to learn from those around me and 
-        love helping others to the best of my ability. I believe in working as a team 
-        because it's far more productive and I get to learn from other peoples points of 
-        view.
-      </p>
+
+      <h3>Vaardigheden</h3>
+      <ul>
+        <li>.NET Framework</li>
+        <li>C#</li>
+        <li>Flutter</li>
+        <li>Dart</li>
+        <li>Reporting</li>
+        <li>Documentation</li>
+        <li>MariaDB</li>
+        <li>Web Technologies</li>
+        <li>Learning</li>
+        <li>Team Management</li>
+        <li>JSON</li>
+        <li>Object-Oriented Programming (OOP)</li>
+        <li>Software Development</li>
+        <li>LAMP</li>
+        <li>Web Project Management</li>
+        <li>Programming</li>
+        <li>HTML5</li>
+        <li>Vue.js</li>
+        <li>Amazon Web Services (AWS)</li>
+        <li>Application Architecture</li>
+      </ul>
     </div>
 
-    <div class="section">
-      <h3>Opleidingen</h3>
-      <p>
-        <strong>Matric, Dramatic Arts, Art and History jan 2014 - jan 2015</strong><br>
-        Allen Glen
-      </p>
-      <p>
-        <strong>History, Art, Life Science/Biology jan 2011 - jan 2013</strong><br>
-        Fourways High
-      </p>
-    </div>
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- PAGE 1 CONTENT (Profiel, Opleidingen, part of Werkervaring) -->
+      <div class="section">
+        <h3>Profiel</h3>
+        <p>
+          So some specifics of my skill set. And at the bottom a bit about who I am ;) -- 
+          About my environments -- I can work on all operating systems. And dev on them 
+          efficiently. - Windows with IIS or Docker or Apache - Linux with Apache or Docker 
+          - Mac OS with Apache or Docker
+        </p>
+        <p>
+          -- My Syntax Knowledge. -- Laravel, MySQL, CSS, PHP, HTML, Javascript and 
+          Jquery, AWS, Github Actions, Flutter & Dart, WordPress, Server administration on 
+          VPS and Shared hosting services.
+        </p>
+        <p>
+          -- About some of my skills -- AWS hosting and S3 Bucket integration with Github 
+          Actions automated deployment onto AWS VM's and also Flutter and Dart 
+          development and Deployment (F & D is for APP Development) Fastlane (F & D 
+          Tool for deployment) exposure for creating deployments for IOS and Android. (I 
+          do need a bit more time to automate the fastlane process for apps. But I do have 
+          enough experience to likely get there within an additional 3 to 4 weeks of focused 
+          work.) Vue JS (Vue is not my strongest but I have extensive exposure wirth the 
+          framework)
+        </p>
+        <p>
+          -- About Me -- I am a highly passionate full stack engineer (Websites and Flutter 
+          apps) I love what I do and my work speaks for itself.
+        </p>
+        <p>
+          I always aspire to produce quality work and the more I program the better my work 
+          gets.
+        </p>
+        <p>
+          It's been a long road for me, but since the beginning of my development career I 
+          have certainly grown a lot and matured as an individual and programmer. I have 
+          worked in small offices and I have worked in a massive corporate offices and I 
+          have always kept myself open to helping others as much as I can and through this 
+          mentality I have been able to learn from my peers and better myself as a 
+          professional developer.
+        </p>
+        <p>
+          I consistently aim to better my skills and love to learn from those around me and 
+          love helping others to the best of my ability. I believe in working as a team 
+          because it's far more productive and I get to learn from other peoples points of 
+          view.
+        </p>
+      </div>
 
-    <div class="section">
-      <h3>Werkervaring</h3>
-      <p>
-        <span class="job-title">Full Stack Engineer aug 2024</span><br>
-        TJIP The Platform Engineer, Netherlands<br><br>
-        Working at Tjip has exceeded my expectations in every way. I am fortunate to 
-        work under outstanding leadership, with a manager who truly sets the standard. 
-        The team I am part of is composed of incredibly talented developers, and I feel 
-        inspired and motivated to contribute to this exceptional group.
-      </p>
-      <p>
-        Though my time with Tjip has just begun, I can already see a future here, where I 
-        aim to advance and grow alongside this team. My role at Tjip aligns deeply with 
-        my passion for the work I do. The company has given me the space to bring my 
-        authentic self to the table, empowering me to make decisions and take ownership 
-        based on the very skills they hired me for. When asked for my input, I know it’s 
-        genuinely valued and considered.
-      </p>
-      <p>
-        This environment makes my work not just a job, but a truly fulfilling experience. I 
-        look forward to each day, knowing I have the opportunity to tackle meaningful 
-        challenges and make a real impact. This sense of purpose fuels my ambition and 
-        strengthens my commitment to contributing to Tjip's continued success and 
-        growth.
-      </p>
-      <p>
-        <span class="job-title">Consultant Contract - Flutter & Dart developer apr 2024 - mei 2024</span><br>
-        CoverWeb.online, Johannesburg<br><br>
-        Contracting for DigiData was a tough challenge coming to terms with their 
-        infrastructure but overall a good experience working with them. I contracted for 2 
-        months and then did a handover and offered some support transitioning their 
-        system over to a new Developer. I essentially over saw the transition of their 
-        system for their app from their old developer to their new developer and did a 
-        system analysis for them for their flutter app and also did some dployments for 
-        them.
-      </p>
-      <p>
-        <span class="job-title">Consultant Contract - Full Stack Developer - Laravel (LAMP Stack)</span><br>
-        jun 2023 - mrt 2024<br>
-        CoverWeb.online, City of Johannesburg, Gauteng, South Africa<br><br>
-        Overview: Engaged in a challenging contract with Qinisa, tasked with overhauling 
-        a legacy system plagued by performance issues, resulting from 19 years of 
-        compounded development and an outdated database.
-      </p>
-      <p>
-        Contributions and Achievements: <br>
-        - Integrated three separate systems into a cohesive unit over 10 months, 
-          enhancing efficiency.<br>
-        - Dramatically improved screen load times by rearchitecting the system.<br>
-        - Established robust development pipelines across three environments 
-          (Development, Pre-Production, Production) and streamlined server and domain 
-          costs.<br>
-        - Advocated for best practices including documentation, weekly training, and 
-          feature tracking, despite client resistance.
-      </p>
-      <p>
-        Challenges: Faced significant obstacles due to sole developer status, 
-        communication issues, and the client's reluctance towards adopting new 
-        processes. The contract was marked by a lack of support for development 
-        tracking, documentation, and system training, culminating in a challenging 
-        conclusion.
-      </p>
-      <p>
-        Conclusion: Despite the difficulties, maintained a professional approach, 
-        contributing significantly to Qinisa's operational capabilities through technical 
-        improvements and cost optimizations. The experience underscored the 
-        importance of communication, documentation, and stakeholder engagement in 
-        technical projects.
-      </p>
-      <p>
-        Reflection: This contract highlighted my commitment to excellence and efficiency 
-        in the face of adversity, enhancing my technical and managerial skills.
-      </p>
-      <p>
-        <span class="job-title">Consultant Contract - WordPress developer mei 2023 - mei 2023</span><br>
-        CoverWeb.online<br><br>
-        Project Overview: Managed the development and ongoing updates of a 
-        WordPress website for a non-profit organization, resulting from the merger of 
-        Common-Unity and Forward for Life. This project involved creating a platform to 
-        reflect the combined mission and values of the two entities.
-      </p>
-      <p>
-        Contributions and Achievements:<br>
-        - Project Management: Successfully managed the end-to-end process of the 
-          website development, ensuring timely delivery and high-quality outcomes.<br>
-        - Client Satisfaction: Maintained ongoing management of the website, resulting 
-          in consistently positive feedback from clients.<br>
-        - Efficiency and Quality: Utilized a standard set of tools and plugins to 
-          streamline project development while maintaining high quality standards.
-      </p>
-      <p>
-        Conclusion: The successful launch and management of the NPO's website 
-        demonstrate my ability to lead and execute web development projects effectively. 
-        My approach ensures both operational efficiency and client satisfaction, 
-        underlining my commitment to delivering value in the non-profit sector.
-      </p>
-      <p>
-        Reflection: This project highlights my skills in project management, client 
-        service, and technical execution.
-      </p>
-      <p>
-        <span class="job-title">Consultant Contract - WordPress Developer nov 2022 - apr 2023</span><br>
-        CoverWeb.online<br><br>
-        Overview: My contract role at ALT Agency primarily involved working on standard 
-        WordPress projects. The environment was fast-paced, and my responsibilities 
-        extended beyond development to include staff training and project management.
-      </p>
-      <p>
-        Contributions and Achievements:<br>
-        - Training and Guidance: Conducted training sessions for staff, enhancing their 
-          skills and understanding of WordPress.<br>
-        - Project Scoping: Actively involved in advising on and writing project scopes, 
-          ensuring clarity and direction for each project.<br>
-        - Process Improvement: Implemented significant changes to the development 
-          tools and processes, resulting in an accelerated end-to-end development cycle 
-          and improved efficiency.<br>
-        - Innovation: Introduced new tools for design and deployment, modernizing the 
-          agency's approach to WordPress projects and increasing productivity.
-      </p>
-      <p>
-        Challenges: During my tenure, I noticed a prioritization of quantity over quality, 
-        with a focus on revenue rather than client satisfaction. This approach often led to 
-        compromised project outcomes.
-      </p>
-      <p>
-        Conclusion: Despite the challenges, my experience at ALT Agency allowed me to 
-        contribute positively by streamlining processes, enhancing team skills, and 
-        introducing innovative tools. My efforts aimed to uplift the quality of work and client 
-        service, addressing the core issues I identified.
-      </p>
-      <p>
-        Reflection: This role highlighted the importance of balancing efficiency with 
-        quality and customer care in the fast-paced environment of web development. 
-        My contributions demonstrate my commitment to improving project outcomes 
-        and client satisfaction.
-      </p>
-    </div>
+      <div class="section">
+        <h3>Opleidingen</h3>
+        <p>
+          <strong>Matric, Dramatic Arts, Art and History jan 2014 - jan 2015</strong><br>
+          Allen Glen
+        </p>
+        <p>
+          <strong>History, Art, Life Science/Biology jan 2011 - jan 2013</strong><br>
+          Fourways High
+        </p>
+      </div>
 
-    <div class="page-break"></div>
-    <div class="section">
-      <h2>PAGE 2</h2>
-      <p>
-        <strong>Full Stack Developer - Laravel (LAMP Stack + AWS) & Flutter and Dart Developer</strong><br>
-        jun 2021 - nov 2022<br>
-        E-Centive, City of Johannesburg, Gauteng, South Africa
-      </p>
-      <p>
-        <strong>Role and Environment:</strong> At E-Centive, I have the privilege of working in a 
-        supportive and collaborative environment that fosters my passion for development. 
-        The company culture emphasizes learning and growth, allowing me to tackle 
-        challenging tasks continuously. This approach has significantly enhanced my 
-        problem-solving skills and technical knowledge.
-      </p>
-      <p>
-        <strong>Contributions and Skill Development:</strong><br>
-        - Full Stack Development: Proficiently working with Laravel and Vue, enabling 
-          comprehensive front-end and back-end solutions.<br>
-        - Mobile App Development: Gained valuable experience in developing applications 
-          using Flutter and Dart, expanding my skill set beyond traditional web development.<br>
-        - DevOps and Cloud Services: Acquired practical experience in DevOps practices 
-          for web and app deployment, along with extensive exposure to Amazon Web 
-          Services and its tools.
-      </p>
-      <p>
-        <strong>Professional Growth:</strong> E-Centive has been instrumental in my development 
-        as a versatile and skilled programmer. The opportunity to work on meaningful software 
-        projects that impact people's lives has been incredibly fulfilling. The exposure to a 
-        wide array of technologies and practices has prepared me to be a highly valuable 
-        asset in the tech industry.
-      </p>
-      <p>
-        <strong>Reflection:</strong> My time at E-Centive is a significant asset to my professional 
-        journey, filled with learning and personal growth. The innovative and motivating 
-        environment, coupled with the chance to learn from exceptionally talented 
-        colleagues, makes working here a truly inspiring experience. I am grateful for the 
-        opportunity to be part of such a dynamic team and look forward to leveraging this 
-        experience in my future endeavours.
-      </p>
+      <div class="section">
+        <h3>Werkervaring</h3>
+        <p>
+          <span class="job-title">Full Stack Engineer aug 2024</span><br>
+          TJIP The Platform Engineer, Netherlands<br><br>
+          Working at Tjip has exceeded my expectations in every way. I am fortunate to 
+          work under outstanding leadership, with a manager who truly sets the standard. 
+          The team I am part of is composed of incredibly talented developers, and I feel 
+          inspired and motivated to contribute to this exceptional group.
+        </p>
+        <p>
+          Though my time with Tjip has just begun, I can already see a future here, where I 
+          aim to advance and grow alongside this team. My role at Tjip aligns deeply with 
+          my passion for the work I do. The company has given me the space to bring my 
+          authentic self to the table, empowering me to make decisions and take ownership 
+          based on the very skills they hired me for. When asked for my input, I know it’s 
+          genuinely valued and considered.
+        </p>
+        <p>
+          This environment makes my work not just a job, but a truly fulfilling experience. I 
+          look forward to each day, knowing I have the opportunity to tackle meaningful 
+          challenges and make a real impact. This sense of purpose fuels my ambition and 
+          strengthens my commitment to contributing to Tjip's continued success and 
+          growth.
+        </p>
+        <p>
+          <span class="job-title">Consultant Contract - Flutter & Dart developer apr 2024 - mei 2024</span><br>
+          CoverWeb.online, Johannesburg<br><br>
+          Contracting for DigiData was a tough challenge coming to terms with their 
+          infrastructure but overall a good experience working with them. I contracted for 2 
+          months and then did a handover and offered some support transitioning their 
+          system over to a new Developer. I essentially over saw the transition of their 
+          system for their app from their old developer to their new developer and did a 
+          system analysis for them for their flutter app and also did some dployments for 
+          them.
+        </p>
+        <p>
+          <span class="job-title">Consultant Contract - Full Stack Developer - Laravel (LAMP Stack)</span><br>
+          jun 2023 - mrt 2024<br>
+          CoverWeb.online, City of Johannesburg, Gauteng, South Africa<br><br>
+          Overview: Engaged in a challenging contract with Qinisa, tasked with overhauling 
+          a legacy system plagued by performance issues, resulting from 19 years of 
+          compounded development and an outdated database.
+        </p>
+        <p>
+          Contributions and Achievements:<br>
+          - Integrated three separate systems into a cohesive unit over 10 months,<br>
+            enhancing efficiency.<br>
+          - Dramatically improved screen load times by rearchitecting the system.<br>
+          - Established robust development pipelines across three environments 
+            (Development, Pre-Production, Production) and streamlined server and domain 
+            costs.<br>
+          - Advocated for best practices including documentation, weekly training, and 
+            feature tracking, despite client resistance.
+        </p>
+        <p>
+          Challenges: Faced significant obstacles due to sole developer status, 
+          communication issues, and the client's reluctance towards adopting new 
+          processes. The contract was marked by a lack of support for development 
+          tracking, documentation, and system training, culminating in a challenging 
+          conclusion.
+        </p>
+        <p>
+          Conclusion: Despite the difficulties, maintained a professional approach, 
+          contributing significantly to Qinisa's operational capabilities through technical 
+          improvements and cost optimizations. The experience underscored the 
+          importance of communication, documentation, and stakeholder engagement in 
+          technical projects.
+        </p>
+        <p>
+          Reflection: This contract highlighted my commitment to excellence and efficiency 
+          in the face of adversity, enhancing my technical and managerial skills.
+        </p>
+        <p>
+          <span class="job-title">Consultant Contract - WordPress developer mei 2023 - mei 2023</span><br>
+          CoverWeb.online<br><br>
+          Project Overview: Managed the development and ongoing updates of a 
+          WordPress website for a non-profit organization, resulting from the merger of 
+          Common-Unity and Forward for Life. This project involved creating a platform to 
+          reflect the combined mission and values of the two entities.
+        </p>
+        <p>
+          Contributions and Achievements:<br>
+          - Project Management: Successfully managed the end-to-end process of the 
+            website development, ensuring timely delivery and high-quality outcomes.<br>
+          - Client Satisfaction: Maintained ongoing management of the website, resulting 
+            in consistently positive feedback from clients.<br>
+          - Efficiency and Quality: Utilized a standard set of tools and plugins to 
+            streamline project development while maintaining high quality standards.
+        </p>
+        <p>
+          Conclusion: The successful launch and management of the NPO's website 
+          demonstrate my ability to lead and execute web development projects effectively. 
+          My approach ensures both operational efficiency and client satisfaction, 
+          underlining my commitment to delivering value in the non-profit sector.
+        </p>
+        <p>
+          Reflection: This project highlights my skills in project management, client 
+          service, and technical execution.
+        </p>
+        <p>
+          <span class="job-title">Consultant Contract - WordPress Developer nov 2022 - apr 2023</span><br>
+          CoverWeb.online<br><br>
+          Overview: My contract role at ALT Agency primarily involved working on standard 
+          WordPress projects. The environment was fast-paced, and my responsibilities 
+          extended beyond development to include staff training and project management.
+        </p>
+        <p>
+          Contributions and Achievements:<br>
+          - Training and Guidance: Conducted training sessions for staff, enhancing their 
+            skills and understanding of WordPress.<br>
+          - Project Scoping: Actively involved in advising on and writing project scopes, 
+            ensuring clarity and direction for each project.<br>
+          - Process Improvement: Implemented significant changes to the development 
+            tools and processes, resulting in an accelerated end-to-end development cycle 
+            and improved efficiency.<br>
+          - Innovation: Introduced new tools for design and deployment, modernizing the 
+            agency's approach to WordPress projects and increasing productivity.
+        </p>
+        <p>
+          Challenges: During my tenure, I noticed a prioritization of quantity over quality, 
+          with a focus on revenue rather than client satisfaction. This approach often led to 
+          compromised project outcomes.
+        </p>
+        <p>
+          Conclusion: Despite the challenges, my experience at ALT Agency allowed me to 
+          contribute positively by streamlining processes, enhancing team skills, and 
+          introducing innovative tools. My efforts aimed to uplift the quality of work and client 
+          service, addressing the core issues I identified.
+        </p>
+        <p>
+          Reflection: This role highlighted the importance of balancing efficiency with 
+          quality and customer care in the fast-paced environment of web development. 
+          My contributions demonstrate my commitment to improving project outcomes 
+          and client satisfaction.
+        </p>
+      </div>
 
-      <p>
-        <strong>Full Stack Developer - Custom internally built PHP (OOP) Framework</strong><br>
-        okt 2020 - mei 2021<br>
-        Imagin8 (SA), Bedfordview, Gauteng, South Africa
-      </p>
-      <p>
-        <strong>Project Overview:</strong> During my time at Imagin8, I played a pivotal role in developing 
-        SMExpert.co.za from its inception. As the lead developer, I was instrumental in 
-        laying the foundational elements of the system, contributing significantly to its 
-        architecture and functionality.
-      </p>
-      <p>
-        <strong>Team Collaboration and Environment:</strong><br>
-        - Team Dynamics: Collaborated with a dedicated team of five developers, fostering 
-          a dynamic and productive working environment.<br>
-        - Challenges and Learning: Although the role was exceptionally stressful, it 
-          provided a unique opportunity for personal and professional growth, allowing me 
-          to enhance my problem-solving and project management skills.
-      </p>
-      <p>
-        <strong>Mentorship and Growth:</strong><br>
-        - Guidance under Leadership: Working under the mentorship of Adam Rabinowitz 
-          was a highlight of my experience at Imagin8. His sharp business acumen and 
-          strategic insights have been invaluable, offering lessons that I will carry 
-          throughout my career.<br>
-        - Professional Development: This project significantly contributed to my 
-          development as a software professional, enhancing my technical skills and 
-          understanding of the business aspects of web development.
-      </p>
-      <p>
-        <strong>Conclusion:</strong> My tenure at Imagin8, particularly my involvement with SMExpert.co.
-        za, was a defining period in my career. The challenges faced and knowledge 
-        gained during this time have been instrumental in shaping my professional 
-        trajectory. The experience has not only refined my technical capabilities but also 
-        enriched my business understanding, thanks to the mentorship and team 
-        collaboration.
-      </p>
-
+      <!-- PAGE BREAK -->
       <div class="page-break"></div>
-      <h2>PAGE 3</h2>
-      <p>
-        <strong>Full Stack OutSystems Developer for Web - I was their sole OutSystems web developer for 2 years</strong><br>
-        sep 2018 - sep 2020<br>
-        Clientele Limited, Johannesburg Area, South Africa
-      </p>
-      <p>
-        <strong>Role and Achievements:</strong> My tenure at Clientele as an OutSystems developer 
-        offered a rewarding platform for personal and professional growth. I engaged in 
-        comprehensive website development, covering both front-end and back-end 
-        services. This role allowed me to deepen my understanding and skills in modern 
-        development practices, particularly through extensive use of API services via 
-        Postman.
-      </p>
-      <p>
-        <strong>Development and Learning:</strong><br>
-        - Technical Proficiency: Enhanced my development capabilities through hands-on 
-          experience with advanced web technologies and software practices.<br>
-        - Collaborative Growth: Benefited from working alongside a team of exceptionally 
-          talented developers, contributing to a significant growth in my technical 
-          knowledge and problem-solving skills.
-      </p>
-      <p>
-        <strong>Professional Growth:</strong> The opportunity to work at Clientele provided a 
-        challenging yet supportive environment where I could shine and push the 
-        boundaries of my abilities. The lessons learned and the experience gained during 
-        this period have been invaluable, shaping me into a more skilled and versatile 
-        developer.
-      </p>
-      <p>
-        <strong>Conclusion:</strong> Working at Clientele has been a defining phase in my development 
-        career, marked by learning, growth, and the acquisition of a broad spectrum of 
-        technical skills. The experiences and knowledge gained here will undoubtedly 
-        accompany me throughout my future endeavors in the tech industry.
-      </p>
 
+      <!-- PAGE 2 CONTENT -->
+      <div class="section">
+        <p>
+          <strong>Full Stack Developer - Laravel (LAMP Stack + AWS) & Flutter and Dart Developer</strong><br>
+          jun 2021 - nov 2022<br>
+          E-Centive, City of Johannesburg, Gauteng, South Africa
+        </p>
+        <p>
+          <strong>Role and Environment:</strong> At E-Centive, I have the privilege of working in a 
+          supportive and collaborative environment that fosters my passion for development. 
+          The company culture emphasizes learning and growth, allowing me to tackle 
+          challenging tasks continuously. This approach has significantly enhanced my 
+          problem-solving skills and technical knowledge.
+        </p>
+        <p>
+          <strong>Contributions and Skill Development:</strong><br>
+          - Full Stack Development: Proficiently working with Laravel and Vue, enabling 
+            comprehensive front-end and back-end solutions.<br>
+          - Mobile App Development: Gained valuable experience in developing applications 
+            using Flutter and Dart, expanding my skill set beyond traditional web development.<br>
+          - DevOps and Cloud Services: Acquired practical experience in DevOps practices 
+            for web and app deployment, along with extensive exposure to Amazon Web 
+            Services and its tools.
+        </p>
+        <p>
+          <strong>Professional Growth:</strong> E-Centive has been instrumental in my development 
+          as a versatile and skilled programmer. The opportunity to work on meaningful software 
+          projects that impact people's lives has been incredibly fulfilling. The exposure to a 
+          wide array of technologies and practices has prepared me to be a highly valuable 
+          asset in the tech industry.
+        </p>
+        <p>
+          <strong>Reflection:</strong> My time at E-Centive is a significant asset to my professional 
+          journey, filled with learning and personal growth. The innovative and motivating 
+          environment, coupled with the chance to learn from exceptionally talented 
+          colleagues, makes working here a truly inspiring experience. I am grateful for the 
+          opportunity to be part of such a dynamic team and look forward to leveraging this 
+          experience in my future endeavours.
+        </p>
+
+        <p>
+          <strong>Full Stack Developer - Custom internally built PHP (OOP) Framework</strong><br>
+          okt 2020 - mei 2021<br>
+          Imagin8 (SA), Bedfordview, Gauteng, South Africa
+        </p>
+        <p>
+          <strong>Project Overview:</strong> During my time at Imagin8, I played a pivotal role in developing 
+          SMExpert.co.za from its inception. As the lead developer, I was instrumental in 
+          laying the foundational elements of the system, contributing significantly to its 
+          architecture and functionality.
+        </p>
+        <p>
+          <strong>Team Collaboration and Environment:</strong><br>
+          - Team Dynamics: Collaborated with a dedicated team of five developers, fostering 
+            a dynamic and productive working environment.<br>
+          - Challenges and Learning: Although the role was exceptionally stressful, it 
+            provided a unique opportunity for personal and professional growth, allowing me 
+            to enhance my problem-solving and project management skills.
+        </p>
+        <p>
+          <strong>Mentorship and Growth:</strong><br>
+          - Guidance under Leadership: Working under the mentorship of Adam Rabinowitz 
+            was a highlight of my experience at Imagin8. His sharp business acumen and 
+            strategic insights have been invaluable, offering lessons that I will carry 
+            throughout my career.<br>
+          - Professional Development: This project significantly contributed to my 
+            development as a software professional, enhancing my technical skills and 
+            understanding of the business aspects of web development.
+        </p>
+        <p>
+          <strong>Conclusion:</strong> My tenure at Imagin8, particularly my involvement with SMExpert.co.
+          za, was a defining period in my career. The challenges faced and knowledge 
+          gained during this time have been instrumental in shaping my professional 
+          trajectory. The experience has not only refined my technical capabilities but also 
+          enriched my business understanding, thanks to the mentorship and team 
+          collaboration.
+        </p>
+      </div>
+
+      <!-- PAGE BREAK -->
       <div class="page-break"></div>
-      <h2>PAGE 4</h2>
-      <p>
-        <strong>Full Stack Developer - WordPress & Laravel (LAMP Stack)</strong><br>
-        jan 2017 - aug 2018<br>
-        WebFootprint
-      </p>
-      <p>
-        At WebFootprint, I specialized in creating personalized websites tailored to the 
-        specific needs of both small and large businesses. My projects ranged from online 
-        shops and contact websites to custom solutions such as JavaScript calendars 
-        integrated with WordPress and bespoke online ordering systems.
-      </p>
-      <p>
-        <strong>Contributions and Achievements:</strong><br>
-        - Adaptive Learning: Quickly adapted to new challenges, learning necessary skills 
-          on the go to meet diverse client requirements effectively.<br>
-        - Growth and Development: Began as an intern and, through mentorship and 
-          continuous online study, significantly expanded my web development skill set.<br>
-        - Customized Solutions: Successfully delivered a variety of custom web solutions, 
-          demonstrating versatility and technical proficiency.
-      </p>
-      <p>
-        <strong>Reflection and Gratitude:</strong> My time at WebFootprint was a pivotal period in my 
-        professional development, providing me with a comprehensive toolkit for my 
-        career in web development. The opportunity to start as an intern and grow into a 
-        competent web developer was invaluable. My experience at WebFootprint has laid 
-        a solid foundation for my future endeavors in the development world.
-      </p>
 
+      <!-- PAGE 3 CONTENT -->
+      <div class="section">
+        <p>
+          <strong>Full Stack OutSystems Developer for Web - I was their sole OutSystems web developer for 2 years</strong><br>
+          sep 2018 - sep 2020<br>
+          Clientele Limited, Johannesburg Area, South Africa
+        </p>
+        <p>
+          <strong>Role and Achievements:</strong> My tenure at Clientele as an OutSystems developer 
+          offered a rewarding platform for personal and professional growth. I engaged in 
+          comprehensive website development, covering both front-end and back-end 
+          services. This role allowed me to deepen my understanding and skills in modern 
+          development practices, particularly through extensive use of API services via 
+          Postman.
+        </p>
+        <p>
+          <strong>Development and Learning:</strong><br>
+          - Technical Proficiency: Enhanced my development capabilities through hands-on 
+            experience with advanced web technologies and software practices.<br>
+          - Collaborative Growth: Benefited from working alongside a team of exceptionally 
+            talented developers, contributing to a significant growth in my technical 
+            knowledge and problem-solving skills.
+        </p>
+        <p>
+          <strong>Professional Growth:</strong> The opportunity to work at Clientele provided a 
+          challenging yet supportive environment where I could shine and push the 
+          boundaries of my abilities. The lessons learned and the experience gained during 
+          this period have been invaluable, shaping me into a more skilled and versatile 
+          developer.
+        </p>
+        <p>
+          <strong>Conclusion:</strong> Working at Clientele has been a defining phase in my development 
+          career, marked by learning, growth, and the acquisition of a broad spectrum of 
+          technical skills. The experiences and knowledge gained here will undoubtedly 
+          accompany me throughout my future endeavors in the tech industry.
+        </p>
+      </div>
+
+      <!-- PAGE BREAK -->
       <div class="page-break"></div>
-      <h2>PAGE 5</h2>
-      <p>
-        <strong>Restaurant Manager nov 2016 - dec 2016</strong><br>
-        Society eatery and craft beer, Merrow down plaza<br>
-        -- Same Owners as Previous Job -- Still work for same owners as panettone café 
-        was just moved to one of their busier restaurants as I am more needed at society 
-        eatery and craft beer
-      </p>
-      <p>
-        <strong>Restaurant Manager sep 2016 - okt 2016</strong><br>
-        panettone café<br>
-        -- Same Owners as Previous Job --
-      </p>
-      <p>
-        <strong>Restaurant Waiter mei 2016 - aug 2016</strong><br>
-        society Eatery and craft beer<br>
-        In my role as a Restaurant Waiter at Society Eatery and Craft Beer, I honed my 
-        skills in cash handling and store management under the guidance of an 
-        exceptional manager. This experience led to my promotion to a managerial 
-        position where I oversaw daily operations and ensured customer satisfaction.
-      </p>
-      <p>
-        <strong>Restaurant Waiter apr 2016 - mei 2016</strong><br>
-        Murphys law<br>
-        In my role as a Restaurant Waiter at Murphys law, I excelled in providing top-notch 
-        customer service, managing tables effectively, and collaborating with the kitchen 
-        team to ensure a smooth dining experience. I implemented upselling strategies to 
-        boost revenue and enhance guest satisfaction.
-      </p>
 
+      <!-- PAGE 4 CONTENT -->
+      <div class="section">
+        <p>
+          <strong>Full Stack Developer - WordPress & Laravel (LAMP Stack)</strong><br>
+          jan 2017 - aug 2018<br>
+          WebFootprint
+        </p>
+        <p>
+          At WebFootprint, I specialized in creating personalized websites tailored to the 
+          specific needs of both small and large businesses. My projects ranged from online 
+          shops and contact websites to custom solutions such as JavaScript calendars 
+          integrated with WordPress and bespoke online ordering systems.
+        </p>
+        <p>
+          <strong>Contributions and Achievements:</strong><br>
+          - Adaptive Learning: Quickly adapted to new challenges, learning necessary skills 
+            on the go to meet diverse client requirements effectively.<br>
+          - Growth and Development: Began as an intern and, through mentorship and 
+            continuous online study, significantly expanded my web development skill set.<br>
+          - Customized Solutions: Successfully delivered a variety of custom web solutions, 
+            demonstrating versatility and technical proficiency.
+        </p>
+        <p>
+          <strong>Reflection and Gratitude:</strong> My time at WebFootprint was a pivotal period in my 
+          professional development, providing me with a comprehensive toolkit for my 
+          career in web development. The opportunity to start as an intern and grow into a 
+          competent web developer was invaluable. My experience at WebFootprint has laid 
+          a solid foundation for my future endeavors in the development world.
+        </p>
+      </div>
+
+      <!-- PAGE BREAK -->
+      <div class="page-break"></div>
+
+      <!-- PAGE 5 CONTENT -->
+      <div class="section">
+        <p>
+          <strong>Restaurant Manager nov 2016 - dec 2016</strong><br>
+          Society eatery and craft beer, Merrow down plaza<br>
+          -- Same Owners as Previous Job -- Still work for same owners as panettone café 
+          was just moved to one of their busier restaurants as I am more needed at society 
+          eatery and craft beer
+        </p>
+        <p>
+          <strong>Restaurant Manager sep 2016 - okt 2016</strong><br>
+          panettone café<br>
+          -- Same Owners as Previous Job --
+        </p>
+        <p>
+          <strong>Restaurant Waiter mei 2016 - aug 2016</strong><br>
+          society Eatery and craft beer<br>
+          In my role as a Restaurant Waiter at Society Eatery and Craft Beer, I honed my 
+          skills in cash handling and store management under the guidance of an 
+          exceptional manager. This experience led to my promotion to a managerial 
+          position where I oversaw daily operations and ensured customer satisfaction.
+        </p>
+        <p>
+          <strong>Restaurant Waiter apr 2016 - mei 2016</strong><br>
+          Murphys law<br>
+          In my role as a Restaurant Waiter at Murphys law, I excelled in providing top-notch 
+          customer service, managing tables effectively, and collaborating with the kitchen 
+          team to ensure a smooth dining experience. I implemented upselling strategies to 
+          boost revenue and enhance guest satisfaction.
+        </p>
+      </div>
     </div>
   </div>
-</div>
-
 </body>
 </html>
