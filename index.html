@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <title>CV - Garth B</title>
   <!-- Font Awesome (icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <style>
     /* 
      * Global Resets/Defaults 
@@ -196,6 +202,26 @@
     }
 
     /* 
+     * Language Button 
+     * - Similar style to the print button, but you can adjust as you prefer.
+     */
+    .lang-btn {
+      padding: 0.6rem 1.2rem; 
+      font-size: 1rem; 
+      cursor: pointer; 
+      border: 2px solid #011f9b; 
+      border-radius: 5px;
+      background-color: #fff;
+      color: #011f9b;
+      transition: background-color 0.2s, color 0.2s;
+      margin-left: 1rem; /* Some spacing from the print button */
+    }
+    .lang-btn:hover {
+      background-color: #011f9b; 
+      color: #fff;
+    }
+
+    /* 
      * H5 for text that used to be wrapped with --
      */
     h5 {
@@ -211,14 +237,32 @@
   </style>
 </head>
 <body>
-  <!-- Print / Save as PDF Button -->
+  <!-- Top controls: Print/Save to PDF AND Language Switch -->
   <div class="text-center my-3 no-print" style="padding: 1rem;">
+    <!-- Print Button -->
     <button
       onclick="window.print()"
       class="print-btn"
       title="Print this page to PDF"
     >
       <i class="fa-solid fa-print"></i> Print / Save as PDF
+    </button>
+
+    <!-- Language Buttons -->
+    <button
+      class="lang-btn"
+      onclick="alert('Switched to English (placeholder). Implement your own logic here!')"
+      title="Switch to English"
+    >
+      <i class="fa-solid fa-language"></i> EN
+    </button>
+
+    <button
+      class="lang-btn"
+      onclick="alert('Switched to Dutch (placeholder). Implement your own logic here!')"
+      title="Switch to Dutch"
+    >
+      <i class="fa-solid fa-language"></i> NL
     </button>
   </div>
 
