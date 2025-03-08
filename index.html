@@ -1,509 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#5dacbd" />
-    <title>Garth B – CV &amp; Portfolio</title>
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta name="theme-color" content="#5dacbd" />
+  <title>CV – Garth B</title>
 
-    <!-- jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.4.min.js"
-      integrity="sha256-/xUj+3OJ+5zqD34SdExrN2TTyOwGmZ+4y1iz2jRkMo0="
-      crossorigin="anonymous"
-    ></script>
+  <!-- jQuery -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-/xUj+3OJ+5zqD34SdExrN2TTyOwGmZ+4y1iz2jRkMo0="
+    crossorigin="anonymous"
+  ></script>
 
-    <!-- Bootstrap CSS & JS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    ></script>
+  <!-- Bootstrap CSS & JS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
-    <!-- Favicon (optional) -->
-    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="images/logo.png" type="image/x-icon" />
 
-    <style>
-      /* Dark background so the white A4 container stands out */
+  <style>
+    /* Dark background so the white A4 container stands out */
+    body {
+      background-color: #1c1c1c;
+      margin: 0;
+      padding: 0;
+      font-family: "Nunito", sans-serif;
+      color: #000;
+    }
+
+    /* A4 Container */
+    .a4-container {
+      width: 210mm;             /* A4 width */
+      min-height: 297mm;        /* A4 height */
+      margin: 20px auto;        /* Center in the browser */
+      background-color: #fff;   /* White document background */
+      padding: 30px 40px;       /* Roomy padding */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Force the print size to A4 and unify margins */
+    @media print {
+      @page {
+        size: A4;
+        margin: 20mm;
+      }
       body {
-        background-color: #1c1c1c;
+        background-color: #fff !important;
         margin: 0;
         padding: 0;
-        font-family: "Nunito", sans-serif;
-        color: #000; /* Use black text in the main content */
       }
-
-      /* 
-         A4 Container 
-         - White background
-         - Shadow for slight separation 
-         - Centered in the browser
-      */
       .a4-container {
-        width: 210mm;             /* A4 width */
-        min-height: 297mm;        /* A4 height */
-        margin: 20px auto;        /* Center the page in the browser */
-        background-color: #fff;   /* White document */
-        padding: 30px 40px;       /* Roomy padding */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
       }
-
-      /* Force the print size to A4 and unify margins */
-      @media print {
-        @page {
-          size: A4;
-          margin: 20mm;
-        }
-
-        body {
-          background-color: #fff !important;
-          margin: 0;
-          padding: 0;
-        }
-
-        .a4-container {
-          width: auto;
-          min-height: auto;
-          margin: 0;
-          box-shadow: none;
-          page-break-after: always;
-        }
-
-        /* Hide the print button in print mode */
-        .no-print {
-          display: none !important;
-        }
+      /* Hide the print button in print mode */
+      .no-print {
+        display: none !important;
       }
-    </style>
-  </head>
+    }
+  </style>
+</head>
 
-  <body>
-    <!-- Print Button (visible only on screen) -->
-    <div class="text-center my-3 no-print">
-      <button
-        onclick="window.print()"
-        class="btn btn-success shadow"
-        title="Print this page to PDF"
-      >
-        <i class="fa fa-file-pdf"></i> Print / Save as PDF
-      </button>
-    </div>
+<body>
+  <!-- Print Button (only on screen) -->
+  <div class="text-center my-3 no-print">
+    <button
+      onclick="window.print()"
+      class="btn btn-success shadow"
+      title="Print this page to PDF"
+    >
+      <i class="fa fa-file-pdf"></i> Print / Save as PDF
+    </button>
+  </div>
 
-    <!-- Main A4 Page Container -->
-    <div class="a4-container">
-      <!-- Contact Information Section -->
-      <section class="mb-4">
-        <div class="text-center mb-3">
-          <h1 class="fw-bold">Garth B – CV &amp; Contact Details</h1>
-          <p class="small mb-0">
-            Thank you for taking the time to review my CV.
-            I appreciate your consideration and hope you find this summary
-            both informative and engaging.
-          </p>
-          <hr />
-        </div>
-        <div class="row text-center text-md-start">
-          <!-- Email / Phone -->
-          <div class="col-md-4 mb-3">
-            <h5 class="fw-bold">
-              <i class="fa fa-envelope"></i> Email &nbsp;|&nbsp;
-              <i class="fa fa-phone"></i> Cell
-            </h5>
-            <hr class="my-2" />
-            <p class="mb-0">
-              <a
-                class="text-decoration-none"
-                href="mailto:13garthbaker@gmail.com"
-                >13garthbaker@gmail.com</a
-              >
-            </p>
-            <p class="mb-0">
-              <a class="text-decoration-none" href="tel:+31684002167"
-                >(+31 / 0) 68 400 2167</a
-              >
-            </p>
-          </div>
-          <!-- GitHub -->
-          <div class="col-md-4 mb-3">
-            <h5 class="fw-bold">
-              <i class="fa-brands fa-github"></i> GitHub
-            </h5>
-            <hr class="my-2" />
-            <p>
-              <a
-                class="text-decoration-none"
-                href="https://github.com/13garth"
-                target="_blank"
-                >github.com/13garth</a
-              >
-            </p>
-          </div>
-          <!-- LinkedIn -->
-          <div class="col-md-4 mb-3">
-            <h5 class="fw-bold">
-              <i class="fa-brands fa-linkedin"></i> LinkedIn
-            </h5>
-            <hr class="my-2" />
-            <p>
-              <a
-                class="text-decoration-none"
-                href="https://www.linkedin.com/in/13garth/"
-                target="_blank"
-                >linkedin.com/in/13garth</a
-              >
-            </p>
-          </div>
-        </div>
-      </section>
+  <!-- Main A4 Page Container -->
+  <div class="a4-container">
+    <!-- Title / Header -->
+    <section class="mb-4">
+      <div class="text-center mb-3">
+        <h1 class="fw-bold">CV – <span class="text-uppercase">Garth B</span></h1>
+        <p class="small mb-0">
+          Software Developer
+        </p>
+        <hr />
+      </div>
+    </section>
 
-      <!-- Professional Experience & Development -->
-      <section class="mb-4">
-        <h2 class="text-center fw-bold mb-4">
-          Professional Experience &amp; Development
-        </h2>
-
-        <div class="row">
-          <!-- Skills & Profile -->
-          <div class="col-md-3">
-            <div class="text-center mb-4">
-              <img
-                src="images/logo.png"
-                alt="Portfolio Logo"
-                style="max-width: 160px;"
-                class="img-fluid"
-              />
-            </div>
-            <p>
-              I am a dynamic Full Stack Developer with a career that began in
-              2016. I specialize in crafting custom, responsive solutions to
-              meet unique client needs. Originally from South Africa, I bring
-              a global perspective to the tech landscape.
-            </p>
-
-            <!-- Skills List -->
-            <h5 class="fw-bold mt-4">Technical Skills</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Laravel Ecosystem</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Laravel Blade Templating</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>PHP (Latest Versions)</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>jQuery</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>CSS / Bootstrap</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Git &amp; GitHub (incl. Actions)</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>MySQL (Relational Databases)</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Vue.js</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>JavaScript</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>GIMP (Graphic Design)</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Flutter &amp; Dart</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>Figma</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>WordPress</li>
-              <li class="mb-2"><i class="fa fa-check text-success me-1"></i>HTML</li>
-            </ul>
-          </div>
-
-          <!-- Work History & Highlights (right column) -->
-          <div class="col-md-9">
-            <h4 class="fw-bold mt-2">CoverWeb</h4>
-            <hr class="mb-2" />
-            <p class="mb-0">
-              <strong>
-                <i class="fa-brands fa-android text-success me-2"></i>
-                DigiData Systems – Flutter &amp; Dart App:
-              </strong>
-            </p>
-            <ul>
-              <li>
-                Led end-to-end development using Flutter &amp; Dart, including
-                deployments to Google Play Console and Android Studio.
-              </li>
-            </ul>
-            <p class="mb-0">
-              <strong>
-                <i class="fa-brands fa-laravel text-danger me-2"></i>
-                Qinisa Events – Full Stack Development:
-              </strong>
-            </p>
-            <ul>
-              <li>
-                Responsible for PHP (Laravel), CSS, MySQL, jQuery &amp;
-                JavaScript.
-              </li>
-            </ul>
-            <p class="mb-0">
-              <strong>
-                <i class="fa-brands fa-wordpress text-primary me-2"></i>
-                ALT Agency – WordPress Development:
-              </strong>
-            </p>
-            <ul>
-              <li>
-                Specialized in PHP, WordPress, CSS, MySQL, jQuery, &amp;
-                JavaScript. Contributed to UI design and feature implementation.
-              </li>
-            </ul>
-
-            <h6 class="fw-bold mt-3">
-              Independent Projects Under CoverWeb
-            </h6>
-            <p>
-              Full end-to-end initiatives: consultations, wireframes,
-              development, testing, invoicing.
-            </p>
-            <ol>
-              <li>
-                <i class="fa-brands fa-wordpress text-primary me-2"></i>
-                Dymaxa –
-                <a href="https://dymaxa.co.za/" target="_blank"
-                  >dymaxa.co.za</a
-                >
-              </li>
-              <li>
-                <i class="fa-brands fa-wordpress text-primary me-2"></i>
-                CraftiNess –
-                <a href="https://craftiness.co.za/" target="_blank"
-                  >craftiness.co.za</a
-                >
-              </li>
-              <li>
-                <i class="fa-brands fa-laravel text-danger me-2"></i>
-                CoverWeb –
-                <a href="https://coverweb.online/" target="_blank"
-                  >coverweb.online</a
-                >
-              </li>
-              <li>
-                <i class="fa-brands fa-wordpress text-primary me-2"></i>
-                DJ Rave-n8er –
-                <a href="https://rave-n8er.com/" target="_blank"
-                  >rave-n8er.com</a
-                >
-              </li>
-              <li>
-                <i class="fa-brands fa-laravel text-danger me-2"></i>
-                Budget Kicker –
-                <a href="https://budgetkicker.com/" target="_blank"
-                  >budgetkicker.com</a
-                >
-              </li>
-              <li>
-                <i class="fa-brands fa-wordpress text-primary me-2"></i>
-                Garth Baker Blog –
-                <a href="https://garthbaker.co.za/" target="_blank"
-                  >garthbaker.co.za</a
-                >
-              </li>
-              <li>
-                <i class="fa-brands fa-wordpress text-primary me-2"></i>
-                Dolk Consulting –
-                <a href="https://dolkconsulting.co.za/" target="_blank"
-                  >dolkconsulting.co.za</a
-                >
-              </li>
-              <li>
-                <i class="fa-brands fa-laravel text-danger me-2"></i>
-                13garth.github.io –
-                <a href="https://13garth.github.io/" target="_blank"
-                  >13garth.github.io</a
-                >
-              </li>
-              <li>
-                <i class="fa-brands fa-wordpress text-primary me-2"></i>
-                The Waiting Room –
-                <a href="https://the-waitingroom.org/" target="_blank"
-                  >the-waitingroom.org</a
-                >
-              </li>
-              <li>
-                <i class="fa-brands fa-wordpress text-primary me-2"></i>
-                Forward for Life &amp; Common Unity –
-                <a href="https://cuffl.org/" target="_blank"
-                  >cuffl.org</a
-                >
-              </li>
-              <li>
-                <i class="fa-brands fa-wordpress text-primary me-2"></i>
-                Penny Farthing Music Studio –
-                <a
-                  href="https://pennyfarthingmusicstudio.com/"
-                  target="_blank"
-                  >pennyfarthingmusicstudio.com</a
-                >
-              </li>
-              <li>...</li>
-            </ol>
-
-            <hr />
-
-            <h4 class="fw-bold mt-2">E-Centive</h4>
-            <p class="small mb-1"><strong>1 Year 6 Months</strong></p>
-            <p>
-              As a Full Stack Engineer and Flutter App Developer, I gained
-              valuable experience in mobile app development, DevOps, and AWS.
-              This role showcased my ability to integrate diverse
-              technologies seamlessly.
-            </p>
-            <p><em>Letter of Recommendation Available</em></p>
-
-            <hr />
-
-            <h4 class="fw-bold mt-2">Imagin8</h4>
-            <p class="small mb-1">
-              <strong>7 Months (Retrenched)</strong>
-            </p>
-            <p>
-              Served as a junior-to-intermediate Full Stack Engineer, laying
-              the groundwork for SMExpert.co.za. This high-pressure
-              environment sharpened my project management skills and
-              solidified my technical foundation.
-            </p>
-            <p><em>Letter of Recommendation Available</em></p>
-
-            <hr />
-
-            <h4 class="fw-bold mt-2">Clientele Limited</h4>
-            <p class="small mb-1"><strong>2 Years</strong></p>
-            <p>
-              Hired as a junior OutSystems Developer for Clientele Life’s
-              websites, I was the sole developer responsible for building and
-              maintaining OutSystems-based web solutions. During this time, I
-              deepened my knowledge of REST APIs and user interface design.
-            </p>
-
-            <hr />
-
-            <h4 class="fw-bold mt-2">WebFootprint</h4>
-            <p class="small mb-1"><strong>1 Year 8 Months</strong></p>
-            <p>
-              Starting as an intern and evolving into a Junior Full Stack
-              Engineer, I worked on customized projects involving PHP,
-              WordPress, and Laravel. This role gave me a solid grounding in
-              both front-end and back-end development.
-            </p>
-            <p><em>Letter of Recommendation Available</em></p>
-
-            <hr />
-
-            <h4 class="fw-bold mt-2">Technical Knowledge &amp; Growth</h4>
-            <p>
-              I am primarily self-taught, expanding my skill set through
-              hands-on experience, tutorials, and continuous problem-solving.
-              Since matriculating in 2015, I have remained dedicated to
-              learning and improving across various web development
-              technologies.
-            </p>
-            <p>
-              My venture, <strong>CoverWeb</strong>, provides hosting and
-              development services to small businesses. I manage every aspect
-              of these projects—from inception and design to development and
-              maintenance—reflecting my capacity to deliver end-to-end
-              solutions on time and on budget.
-            </p>
-            <p class="border p-2 small">
-              <a href="https://coverweb.online" class="me-3" target="_blank"
-                >CoverWeb.online</a
-              >
-              <a href="https://budgetkicker.com" class="me-3" target="_blank"
-                >BudgetKicker.com</a
-              >
-              <a href="https://garthbaker.co.za" class="me-3" target="_blank"
-                >GarthBaker.co.za</a
-              >
-              <a
-                href="https://g-portfolio.garthbaker.co.za"
-                target="_blank"
-                >GPortfolio.garthbaker.co.za</a
-              >
-            </p>
-            <p>
-              <strong>Summary:</strong> My extensive project experience
-              demonstrates my versatility, dedication, and passion for
-              continuous improvement. By combining self-driven learning with
-              real-world application, I strive to deliver high-quality
-              solutions that meet both client and end-user needs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Problem Solving Examples -->
-      <section class="mb-5">
-        <h2 class="fw-bold text-center mb-4">Problem Solving in Action</h2>
-
-        <!-- Example 1: Seating Data Interface -->
-        <div class="mb-3">
-          <h5 class="fw-bold">Challenge:</h5>
-          <p>
-            Develop an interactive seating interface that visualizes seat
-            assignments for better management of guest data.
-          </p>
-          <h6 class="fw-bold">Solution Approach</h6>
-          <ol>
-            <li>Clearly define user needs and requirements.</li>
-            <li>Identify possible implementation methods (pros &amp; cons).</li>
-            <li>Research solutions and map them to requirements.</li>
-            <li>
-              Chose an HTML Canvas approach for flexibility and dynamic
-              rendering. By uploading a venue plan as an image and using a
-              drag-and-drop overlay, event managers can visually place seat
-              markers:
-              <ul>
-                <li>Highly customizable</li>
-                <li>Reusable for different layouts</li>
-                <li>
-                  Designed as an add-on library for easy future enhancements
-                </li>
-              </ul>
-              <img
-                src="images/seating-preview.png"
-                alt="Seating Preview"
-                class="img-fluid mt-2 border rounded"
-              />
-            </li>
-          </ol>
-        </div>
-
-        <!-- Example 2: Command Prompt Dominoes Game -->
-        <div class="mb-3">
-          <h5 class="fw-bold">Challenge:</h5>
-          <p>
-            Create a command-line Dominoes game with simplified rules.
-          </p>
-          <h6 class="fw-bold">Solution Approach</h6>
-          <ol>
-            <li>Define the custom rules and objectives of the game.</li>
-            <li>
-              Break down potential implementation strategies (turn-taking,
-              tile distribution, scoring logic).
-            </li>
-            <li>Use PHP arrays to represent domino tiles and apply game logic.</li>
-            <li>
-              Modified rules allow placement only at the ends of a linear
-              board; the first player to place all tiles wins.
-            </li>
-          </ol>
+    <!-- Contact / Personal Info -->
+    <section class="mb-5">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">
+            <i class="fa fa-user"></i> Personalia
+          </h5>
+          <hr class="my-2" />
+          <p class="mb-1"><strong>Name:</strong> <br/> Garth B</p>
           <p class="mb-1">
-            Each run is unique due to random tile distribution:
+            <strong>Email:</strong> <br/>
+            <a
+              class="text-decoration-none"
+              href="mailto:13garthbaker@gmail.com"
+            >13garthbaker@gmail.com</a>
           </p>
-          <img
-            src="images/dominoes-game.png"
-            alt="CMD Dominoes"
-            class="img-fluid mt-2 border rounded"
-          />
+          <p class="mb-1">
+            <strong>Phone:</strong> <br/>
+            <a class="text-decoration-none" href="tel:+31684002167">
+              (+31) 684002167
+            </a>
+          </p>
+          <p class="mb-1">
+            <strong>Location:</strong> <br/>
+            1363BX Almere
+          </p>
+          <p class="mb-1">
+            <strong>LinkedIn:</strong> <br/>
+            <a
+              class="text-decoration-none"
+              href="https://www.linkedin.com/in/13garth"
+              target="_blank"
+            >linkedin.com/in/13garth</a>
+          </p>
         </div>
-      </section>
-    </div>
-  </body>
+        <!-- Skills / Vaardigheden -->
+        <div class="col-md-8 mb-4">
+          <h5 class="fw-bold">
+            <i class="fa fa-cogs"></i> Vaardigheden (Skills)
+          </h5>
+          <hr class="my-2" />
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-unstyled mb-0">
+                <li><i class="fa fa-check text-success me-1"></i>.NET Framework</li>
+                <li><i class="fa fa-check text-success me-1"></i>C#</li>
+                <li><i class="fa fa-check text-success me-1"></i>Flutter / Dart</li>
+                <li><i class="fa fa-check text-success me-1"></i>Reporting</li>
+                <li><i class="fa fa-check text-success me-1"></i>Documentation</li>
+                <li><i class="fa fa-check text-success me-1"></i>MariaDB</li>
+                <li><i class="fa fa-check text-success me-1"></i>Web Technologies</li>
+                <li><i class="fa fa-check text-success me-1"></i>JSON</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled mb-0">
+                <li><i class="fa fa-check text-success me-1"></i>Object-Oriented Programming (OOP)</li>
+                <li><i class="fa fa-check text-success me-1"></i>Software Development</li>
+                <li><i class="fa fa-check text-success me-1"></i>LAMP</li>
+                <li><i class="fa fa-check text-success me-1"></i>Web Project Management</li>
+                <li><i class="fa fa-check text-success me-1"></i>Learning / Self-Teaching</li>
+                <li><i class="fa fa-check text-success me-1"></i>Team Management</li>
+                <li><i class="fa fa-check text-success me-1"></i>Amazon Web Services (AWS)</li>
+                <li><i class="fa fa-check text-success me-1"></i>Vue.js</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile or 'About Me' -->
+    <section class="mb-5">
+      <h4 class="fw-bold">Profiel (About Me)</h4>
+      <hr />
+      <p>
+        So some specifics of my skill set, and at the bottom a bit about who I am.
+        <br/><br/>
+        <strong>About my environments</strong> – I can work on all operating systems
+        (Windows with IIS, Docker, or Apache; Linux with Apache or Docker; Mac OS
+        with Apache or Docker). 
+      </p>
+      <p>
+        <strong>My Syntax Knowledge</strong> – Laravel, MySQL, CSS, PHP, HTML, 
+        JavaScript and jQuery, AWS, GitHub Actions, Flutter & Dart, WordPress, 
+        server administration on VPS and shared hosting services.
+      </p>
+      <p>
+        <strong>Additional Skills</strong> – 
+        AWS hosting and S3 Bucket integration with GitHub Actions automated deployments
+        onto AWS VMs, Flutter & Dart development and deployment. Also experience
+        with Fastlane for creating Android and iOS app deployments (although I still
+        want a bit more time to automate the Fastlane process fully). 
+        I have had extensive exposure to Vue.js (though it’s not my strongest framework,
+        I can work effectively with it).
+      </p>
+      <p>
+        <strong>About Me</strong> – I am a highly passionate full stack engineer (websites
+        and Flutter apps). I love what I do, and my work speaks for itself. I always 
+        aspire to produce quality work, and the more I program the better my work 
+        gets. Since the start of my development career I have grown a lot and matured
+        as a developer. I’ve worked in small offices and large corporate environments, 
+        always staying open to helping others. This collaborative mentality has allowed 
+        me to learn from peers and continually improve. 
+      </p>
+      <p>
+        I believe in working as a team because it’s far more productive, and I get to
+        learn from other perspectives. I consistently aim to better my skills and love
+        to learn from those around me, helping others to the best of my ability.
+      </p>
+    </section>
+
+    <!-- Experience / Werkervaring -->
+    <section class="mb-5">
+      <h2 class="fw-bold">Werkervaring (Work Experience)</h2>
+      <hr />
+
+      <!-- Tjip -->
+      <div class="mb-4">
+        <h5 class="fw-bold mb-1">Full Stack Engineer <span class="text-muted">– aug 2024</span></h5>
+        <p class="mb-1">
+          <strong>TJIP The Platform Engineer, Netherlands</strong>
+        </p>
+        <p>
+          Working at Tjip has exceeded my expectations in every way. I’m fortunate to 
+          be under outstanding leadership, with a manager who truly sets the standard.
+          The team I’m part of is composed of incredibly talented developers. Though 
+          my time here has just begun, I can already see a future where I aim to advance 
+          and grow alongside this team. 
+        </p>
+        <p>
+          The role aligns with my passion for development. I’m empowered to make 
+          decisions based on the skills I was hired for, and I feel my input is genuinely 
+          valued. This environment makes my work truly fulfilling, and I look forward 
+          to each day, knowing I’m tackling meaningful challenges and making a real 
+          impact.
+        </p>
+      </div>
+
+      <!-- DigiData (CoverWeb) -->
+      <div class="mb-4">
+        <h5 class="fw-bold mb-1">Consultant Contract – Flutter & Dart Developer <span class="text-muted">– Apr 2024 - May 2024</span></h5>
+        <p><strong>CoverWeb.online, Johannesburg</strong></p>
+        <p>
+          Contracting for DigiData was a tough challenge in coming to terms with their
+          infrastructure, but overall it was a good experience. I contracted for 2 months, 
+          then handed over and supported the transition to a new developer. I oversaw 
+          the migration of their flutter app system from their old developer and performed 
+          a system analysis for them, plus deployments.
+        </p>
+      </div>
+
+      <!-- Qinisa (CoverWeb) -->
+      <div class="mb-4">
+        <h5 class="fw-bold mb-1">Consultant Contract – Full Stack Developer (Laravel / LAMP) <span class="text-muted">– Jun 2023 - Mar 2024</span></h5>
+        <p><strong>CoverWeb.online, South Africa</strong></p>
+        <p>
+          Overhauled a 19-year-old legacy system for Qinisa, plagued by performance
+          issues. Integrated three separate systems into one, greatly improving screen 
+          load times and establishing robust development pipelines across multiple 
+          environments. Championed best practices like documentation and training, 
+          often facing client resistance. 
+        </p>
+        <p>
+          Ultimately delivered major technical and cost optimizations despite communication
+          challenges and sole-developer constraints. This experience underlined the
+          importance of communication, documentation, and stakeholder engagement.
+        </p>
+      </div>
+
+      <!-- WordPress (CoverWeb) -->
+      <div class="mb-4">
+        <h5 class="fw-bold mb-1">Consultant Contract – WordPress Developer <span class="text-muted">– May 2023 - May 2023</span></h5>
+        <p><strong>CoverWeb.online</strong></p>
+        <p>
+          Managed development and ongoing updates for a non-profit organization
+          formed by the merger of Common-Unity and Forward for Life. Oversaw 
+          end-to-end site creation to reflect their combined mission. Maintained a 
+          high degree of client satisfaction through continuous management and 
+          standard tooling / plugins. 
+        </p>
+      </div>
+
+      <!-- ALT Agency -->
+      <div class="mb-4">
+        <h5 class="fw-bold mb-1">Consultant Contract – WordPress Developer <span class="text-muted">– Nov 2022 - Apr 2023</span></h5>
+        <p><strong>CoverWeb.online</strong></p>
+        <p>
+          Engaged at ALT Agency on standard WordPress projects in a fast-paced 
+          environment. Trained staff, helped write project scopes, and introduced 
+          new tools that sped up development end-to-end. 
+        </p>
+        <p>
+          While the agency prioritized quantity over quality, I focused on streamlining
+          processes to improve project outcomes and client satisfaction.
+        </p>
+      </div>
+
+      <!-- E-Centive -->
+      <div class="mb-4">
+        <h5 class="fw-bold mb-1">Full Stack Developer – Laravel (LAMP + AWS) & Flutter/Dart <span class="text-muted">– Jun 2021 - Nov 2022</span></h5>
+        <p><strong>E-Centive, Johannesburg, SA</strong></p>
+        <p>
+          Worked in a highly supportive environment, gaining exposure to 
+          Laravel + Vue, Flutter/Dart mobile development, AWS, and DevOps 
+          practices. This role broadened my skillset and gave me opportunities
+          to tackle meaningful software projects that directly impacted users.
+        </p>
+      </div>
+
+      <!-- Imagin8 -->
+      <div class="mb-4">
+        <h5 class="fw-bold mb-1">Full Stack Developer – Custom PHP (OOP) Framework <span class="text-muted">– Oct 2020 - May 2021</span></h5>
+        <p><strong>Imagin8 (SA), Bedfordview</strong></p>
+        <p>
+          Played a pivotal role in developing SMExpert.co.za from scratch, collaborating
+          with five other developers. While it was a high-stress environment, it offered 
+          substantial growth in both technical and project management skills. 
+        </p>
+        <p>
+          Mentored by Adam Rabinowitz, whose business acumen was invaluable 
+          for my career growth.
+        </p>
+      </div>
+
+      <!-- Clientele -->
+      <div class="mb-4">
+        <h5 class="fw-bold mb-1">Full Stack OutSystems Developer <span class="text-muted">– Sep 2018 - Sep 2020</span></h5>
+        <p><strong>Clientele Limited, Johannesburg</strong></p>
+        <p>
+          Served as an OutSystems developer for Clientele Life websites. Solely
+          responsible for building and maintaining OutSystems-based solutions, 
+          deepening my knowledge of API integrations and UI design. Gained 
+          valuable experience from working with a highly talented dev team.
+        </p>
+      </div>
+
+      <!-- WebFootprint -->
+      <div class="mb-4">
+        <h5 class="fw-bold mb-1">Full Stack Developer – WordPress & Laravel (LAMP) <span class="text-muted">– Jan 2017 - Aug 2018</span></h5>
+        <p><strong>WebFootprint</strong></p>
+        <p>
+          Began as an intern and progressed to Junior Full Stack Engineer, working 
+          on custom projects involving PHP, WordPress, and Laravel. This period laid 
+          the foundations for my career, granting hands-on experience in front-end 
+          and back-end development.
+        </p>
+      </div>
+
+      <!-- Restaurant Roles (Condensed) -->
+      <div class="mb-4">
+        <h5 class="fw-bold mb-1">Restaurant Manager & Waiter <span class="text-muted">– 2016</span></h5>
+        <p><strong>Society Eatery & Craft Beer / Panettone Café / Murphy's Law</strong></p>
+        <p>
+          Various roles as waiter and manager. Gained valuable customer service 
+          and leadership experience, handling daily operations, cash management,
+          and staff coordination.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education / Opleidingen -->
+    <section class="mb-5">
+      <h2 class="fw-bold">Opleidingen (Education)</h2>
+      <hr />
+      <p>
+        <strong>Matric, Dramatic Arts, Art and History</strong> <br/>
+        Allen Glen (Jan 2014 - Jan 2015)
+      </p>
+      <p>
+        <strong>History, Art, Life Science/Biology</strong> <br/>
+        Fourways High (Jan 2011 - Jan 2013)
+      </p>
+    </section>
+
+    <!-- Certificates -->
+    <section class="mb-5">
+      <h2 class="fw-bold">Certificaten (Certificates)</h2>
+      <hr />
+      <p>
+        <strong>Introducing Entity Framework</strong> – Feb 2025
+      </p>
+    </section>
+
+    <!-- Closing / Reflection -->
+    <section>
+      <p class="mb-0">
+        <strong>Reflection:</strong> I truly appreciate the journey thus far and look forward 
+        to leveraging my experiences in future opportunities. My exposure to different 
+        environments and diverse technologies positions me well as a versatile, 
+        passionate developer. 
+      </p>
+    </section>
+
+  </div>
+</body>
 </html>
