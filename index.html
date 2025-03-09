@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl"> <!-- Default language set to Dutch -->
 <head>
   <meta charset="UTF-8">
   <title>CV - Garth B</title>
@@ -202,26 +202,6 @@
     }
 
     /* 
-     * Language Button 
-     * - Similar style to the print button, but you can adjust as you prefer.
-     */
-    .lang-btn {
-      padding: 0.6rem 1.2rem; 
-      font-size: 1rem; 
-      cursor: pointer; 
-      border: 2px solid #011f9b; 
-      border-radius: 5px;
-      background-color: #fff;
-      color: #011f9b;
-      transition: background-color 0.2s, color 0.2s;
-      margin-left: 1rem; /* Some spacing from the print button */
-    }
-    .lang-btn:hover {
-      background-color: #011f9b; 
-      color: #fff;
-    }
-
-    /* 
      * H5 for text that used to be wrapped with --
      */
     h5 {
@@ -234,12 +214,25 @@
       border-left: 4px solid #011f9b;
       padding-left: 8px;
     }
+
+    /* 
+     * Language Switcher Container 
+     * - Placed next to the print button
+     */
+    .language-switcher {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 20px;
+    }
   </style>
 </head>
 <body>
-  <!-- Top controls: Print/Save to PDF AND Language Switch -->
+  <!-- 
+    Print / Save as PDF Button + Language Switcher 
+    The language switcher uses Google's Translate widget to toggle
+    between Dutch (default) and English.
+  -->
   <div class="text-center my-3 no-print" style="padding: 1rem;">
-    <!-- Print Button -->
     <button
       onclick="window.print()"
       class="print-btn"
@@ -248,22 +241,8 @@
       <i class="fa-solid fa-print"></i> Print / Save as PDF
     </button>
 
-    <!-- Language Buttons -->
-    <button
-      class="lang-btn"
-      onclick="alert('Switched to English (placeholder). Implement your own logic here!')"
-      title="Switch to English"
-    >
-      <i class="fa-solid fa-language"></i> EN
-    </button>
-
-    <button
-      class="lang-btn"
-      onclick="alert('Switched to Dutch (placeholder). Implement your own logic here!')"
-      title="Switch to Dutch"
-    >
-      <i class="fa-solid fa-language"></i> NL
-    </button>
+    <!-- Language Switcher -->
+    <div class="language-switcher" id="google_translate_element" title="Select Language"></div>
   </div>
 
   <div class="container a4-container">
@@ -690,5 +669,21 @@
       </div>
     </div>
   </div>
+
+  <!-- Google Translate Script -->
+  <!-- This script calls the Google Translate API and loads the widget. -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'nl', 
+        includedLanguages: 'nl,en',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script
+    type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
 </body>
 </html>
