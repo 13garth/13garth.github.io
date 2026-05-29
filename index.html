@@ -1,554 +1,794 @@
-<!DOCTYPE html>
-<html lang="nl"> <!-- Default language set to Dutch -->
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CV - Garth B</title>
-  <!-- Font Awesome (icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CV for Garth Baker, a senior Laravel full-stack engineer and senior WordPress developer based in the Netherlands." />
+  <title>Garth Baker - CV</title>
   <style>
-    /* Global Resets/Defaults */
+    :root {
+      color-scheme: dark;
+      --bg: #080d16;
+      --panel: #0f172a;
+      --panel-soft: #111827;
+      --line: #273244;
+      --text: #f8fafc;
+      --muted: #a8b4c7;
+      --blue: #58a6ff;
+      --cyan: #38bdf8;
+      --green: #34d399;
+      --amber: #f59e0b;
+      --red: #ff5a5f;
+      --purple: #a78bfa;
+    }
+
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
-    body > table {
-      opacity: 0;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .skiptranslate > iframe {
-      height: 0 !important;
-      border-style: none;
-      box-shadow: none;
-    }
-    
-    .fas, .fab, .fa-print {
-      width: 18px;
-    }
-    
-    /* Body */
     body {
-      background-color: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 30rem),
+        radial-gradient(circle at top right, rgba(255, 90, 95, 0.16), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    .text-center {
-      text-align: center;
+    a {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
     }
-    
-    /* Main Container for the CV */
-    .container {
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100% - 32px, 1040px);
+      margin: 0 auto;
+      padding: 24px 0 64px;
+    }
+
+    .topbar {
       display: flex;
-      max-width: 1200px;
-      margin: 2rem auto;
-      background: #fff;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+    }
+
+    .print-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel-soft);
+      color: var(--text);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .print-button:hover {
+      border-color: var(--cyan);
+    }
+
+    .hero {
+      position: relative;
       overflow: hidden;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      width: 30%;
-      padding: 20px;
-      /* Gradient example; remove if you prefer a solid color */
-      background-image: linear-gradient(0deg, transparent 99%, #000f64);
-    }
-
-    .sidebar img {
-      max-width: 150px;
-      height: auto;
-      display: block;
-      margin: 0 auto 20px;
-      border: 5px solid #fff;
-      border-radius: 15px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    }
-
-    .sidebar h2, .sidebar h3 {
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #011f9b;
-      text-transform: uppercase;
-    }
-
-    .sidebar p, .sidebar ul {
-      margin-bottom: 20px;
-      font-size: 0.95rem;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    /* Skill list items */
-    .sidebar ul li {
-      margin-bottom: 8px;
-      transition: transform 0.1s, background-color 0.1s;
-    }
-    .sidebar ul li:hover {
-      background-color: #d9f1ec;
-      transform: scale(1.02);
-      cursor: default;
-    }
-
-    /* Main Content */
-    .main-content {
-      width: 70%;
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 26px;
+      align-items: center;
       padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background:
+        linear-gradient(90deg, rgba(255, 90, 95, 0.2), rgba(245, 158, 11, 0.14), rgba(52, 211, 153, 0.12), rgba(56, 189, 248, 0.18)),
+        var(--panel);
     }
 
-    .main-content h3 {
-      margin-top: 0;
-      font-size: 1.3rem;
-      color: #011f9b;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: linear-gradient(90deg, var(--red), var(--amber), var(--green), var(--cyan));
+    }
+
+    .portrait {
+      position: relative;
+      width: 150px;
+      aspect-ratio: 1;
+      overflow: hidden;
+      border: 1px solid #334155;
+      border-radius: 24px;
+      background: #111827;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 55%;
+      transform: scale(1.08);
+    }
+
+    .eyebrow {
+      margin: 0 0 4px;
+      color: var(--cyan);
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 6px;
+      font-size: clamp(2.4rem, 7vw, 4.7rem);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    .role {
+      margin-bottom: 14px;
+      color: #dbeafe;
+      font-size: 1.35rem;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+
+    .summary {
+      max-width: 720px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .quick-facts,
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .fact,
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(17, 24, 39, 0.88);
+      color: #dbeafe;
+      font-size: 0.88rem;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .section {
-      margin-bottom: 50px;
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
     }
 
-    .section p {
-      margin-bottom: 12px;
-      text-align: justify;
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 1.45rem;
+      line-height: 1.2;
+    }
+
+    .section > h2 {
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
       font-size: 1rem;
+    }
+
+    p,
+    li {
+      color: var(--muted);
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-top: 24px;
+    }
+
+    .side {
+      position: sticky;
+      top: 18px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .panel {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(17, 24, 39, 0.86);
+    }
+
+    .panel h2,
+    .panel h3 {
+      margin-bottom: 12px;
+    }
+
+    .contact-list,
+    .plain-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-list li,
+    .plain-list li {
+      color: var(--muted);
+    }
+
+    .plain-list li::before {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-right: 9px;
+      border-radius: 999px;
+      background: var(--green);
+      vertical-align: 1px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(17, 24, 39, 0.86);
+    }
+
+    .card ul,
+    .experience ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .experience {
+      display: grid;
+      gap: 14px;
+    }
+
+    .job {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(15, 23, 42, 0.82);
+    }
+
+    .job-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      margin-bottom: 10px;
     }
 
     .job-title {
-      font-weight: bold;
-      margin-top: 20px;
-      color: #2c3e50;
+      margin: 0;
+      color: var(--text);
+      font-weight: 900;
     }
 
-    /* Page Break */
-    .page-break {
-      margin: 40px 0;
-      border-top: 2px dashed #ccc;
+    .company {
+      margin: 2px 0 0;
+      color: #dbeafe;
+      font-weight: 800;
     }
 
-    /* A4 Container for print */
-    .a4-container {
-      width: 210mm;
-      min-height: 297mm;
-      margin: 20px auto;
-      background-color: #fff;
+    .dates {
+      color: var(--amber);
+      font-size: 0.9rem;
+      font-weight: 900;
+      white-space: nowrap;
     }
 
-    /* Print Styles */
-    @media print {
-      @page {
-        size: A4;
-        margin: 20mm;
+    .rows {
+      display: grid;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 14px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+    }
+
+    .row:last-child {
+      border-bottom: 0;
+    }
+
+    .footer {
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 880px) {
+      .hero,
+      .layout {
+        grid-template-columns: 1fr;
       }
+
+      .portrait {
+        width: 124px;
+      }
+
+      .side {
+        position: static;
+      }
+
+      .grid,
+      .job-head,
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .dates {
+        white-space: normal;
+      }
+    }
+
+    @media print {
+      :root {
+        color-scheme: light;
+      }
+
       body {
-        background-color: #fff !important;
-        margin: 0;
+        background: #fff;
+        color: #111827;
+        font-size: 11pt;
+      }
+
+      .page {
+        width: auto;
         padding: 0;
       }
-      .a4-container {
-        width: auto;
-        min-height: auto;
-        margin: 0;
-        box-shadow: none;
-        page-break-after: always;
-      }
-      .no-print {
-        display: none !important;
-      }
-      .sidebar ul li:hover {
-        transform: none;
-        background-color: transparent;
-      }
-      .goog-te-banner-frame.skiptranslate { 
-        display: none !important; 
-      }
-    }
 
-    /* Print Button */
-    .print-btn {
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border: 2px solid #011f9b;
-      border-radius: 5px;
-      background-color: #fff;
-      color: #011f9b;
-      transition: background-color 0.2s, color 0.2s;
-    }
-    .print-btn:hover {
-      background-color: #011f9b;
-      color: #fff;
-    }
+      .topbar,
+      .portrait {
+        display: none;
+      }
 
-    /* H5 for text that used to be wrapped with -- */
-    h5 {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      font-size: 1rem;
-      color: #011f9b;
-      font-weight: bold;
-      text-transform: uppercase;
-      border-left: 4px solid #011f9b;
-      padding-left: 8px;
-    }
+      .hero,
+      .panel,
+      .card,
+      .job {
+        border-color: #d1d5db;
+        background: #fff;
+      }
 
-    /* Language Switcher Container */
-    .language-switcher {
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 20px;
-    }
-    /* Style the Google Translate select box like the button */
-    .language-switcher select.goog-te-combo {
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      border: 2px solid #011f9b;
-      border-radius: 5px;
-      background-color: #fff;
-      color: #011f9b;
-      outline: none;
-      margin: 0;
-    }
-    .language-switcher select.goog-te-combo:hover {
-      background-color: #011f9b;
-      color: #fff;
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 0 0 16px;
+        border: 0;
+      }
+
+      .hero::before {
+        display: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      strong,
+      .job-title {
+        color: #111827;
+      }
+
+      p,
+      li,
+      .contact-list li,
+      .plain-list li,
+      .summary {
+        color: #374151;
+      }
+
+      .role,
+      .company,
+      a {
+        color: #1d4ed8;
+      }
+
+      .layout {
+        display: block;
+      }
+
+      .side,
+      .section,
+      .job {
+        break-inside: avoid;
+      }
+
+      .section {
+        padding: 18px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Print / Save as PDF Button + Language Switcher -->
-  <div class="text-center my-3 no-print" style="padding: 1rem;">
-    <button onclick="window.print()" class="print-btn" title="Print this page to PDF">
-      <i class="fa-solid fa-print"></i> Print / Save as PDF
-    </button>
-    <!-- Language Switcher Container -->
-    <div class="language-switcher" id="google_translate_element" title="Select Language"></div>
-  </div>
-
-  <div class="container a4-container">
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-      <img src="images/logo.png" alt="Profile Picture" />
-      <h2>Personalia</h2>
-      <p>
-        <i class="fas fa-user"></i> Garth B.<br>
-        <i class="fas fa-envelope"></i> 13garthbaker@gmail.com<br>
-        <i class="fas fa-phone"></i> +31 68 400 2167<br>
-        <i class="fas fa-map-marker-alt"></i> Almere<br>
-        <i class="fab fa-linkedin"></i> linkedin.com/in/13garth
-      </p>
-      <h3>Vaardigheden</h3>
-      <ul>
-        <li>.NET Framework</li>
-        <li>C#</li>
-        <li>Flutter</li>
-        <li>Dart</li>
-        <li>Reporting</li>
-        <li>Documentation</li>
-        <li>MariaDB</li>
-        <li>Web Technologies</li>
-        <li>Learning</li>
-        <li>Team Management</li>
-        <li>JSON</li>
-        <li>Object-Oriented Programming (OOP)</li>
-        <li>Software Development</li>
-        <li>LAMP</li>
-        <li>Web Project Management</li>
-        <li>Programming</li>
-        <li>HTML5</li>
-        <li>Vue.js</li>
-        <li>Amazon Web Services (AWS)</li>
-        <li>Application Architecture</li>
-      </ul>
+  <main class="page">
+    <div class="topbar">
+      <nav class="nav" aria-label="Primary links">
+        <a href="https://13garth.github.io">Full CV</a>
+        <a href="https://13garth.github.io/13garth">GitHub Profile Page</a>
+        <a href="https://github.com/13garth">GitHub</a>
+        <a href="https://www.linkedin.com/in/13garth">LinkedIn</a>
+        <a href="https://BudgetKicker.com">Budget Kicker</a>
+        <a href="https://coverweb.online">CoverWeb</a>
+      </nav>
+      <button class="print-button" type="button" onclick="window.print()" aria-label="Print or save this CV as PDF">
+        Print / PDF
+      </button>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div class="main-content">
-      <!-- PAGE 1 CONTENT -->
-      <div class="section">
-        <h3>Profiel</h3>
-        <p>
-          Below is an overview of my core skill set, followed by insights into who I am as a professional.
-        </p>
-        <h5>About my environments</h5>
-        <p>
-          I am adept at developing on all major operating systems, ensuring smooth and efficient workflows across platforms such as Windows (IIS, Docker, Apache), Linux (Apache, Docker), and macOS (Apache, Docker).
-        </p>
-        <h5>My Syntax Knowledge</h5>
-        <p>
-          My expertise spans Laravel, MySQL, CSS, PHP, HTML, JavaScript, jQuery, AWS, GitHub Actions, Flutter &amp; Dart, WordPress, and server administration on both VPS and shared hosting environments.
-        </p>
-        <h5>About some of my skills</h5>
-        <p>
-          I have extensive experience with AWS hosting and S3 bucket integration, leveraging GitHub Actions for automated deployment to AWS VMs. I also specialize in Flutter and Dart development, including the use of Fastlane for iOS and Android app deployments. My exposure to Vue.js, although not my primary framework, has been substantial. While I continue to refine my expertise in automating Fastlane deployments, I possess the foundational knowledge to deliver high-quality applications and solutions.
-        </p>
-        <h5>About Me</h5>
-        <p>
-          I am a dedicated full stack engineer (specializing in both web and Flutter app development) who is genuinely passionate about my craft. My goal is to consistently produce exceptional work, and I believe my code and output speak for themselves.
-        </p>
-        <p>
-          Over the course of my career, I have grown from entry-level beginnings into a mature and confident programmer, gaining invaluable experience in both small and large corporate settings. By proactively offering assistance to colleagues and staying open to feedback, I’ve continuously sharpened my skills and expanded my professional horizons.
-        </p>
-        <p>
-          My ambition is to keep evolving as a developer while actively supporting those around me. Teamwork, in my view, fosters creativity, productivity, and a broader exchange of perspectives—elements I consider essential for high-impact software development.
-        </p>
+    <header class="hero">
+      <div class="portrait" aria-hidden="true">
+        <img src="images/logo.png" alt="" />
       </div>
-
-      <div class="section">
-        <h3>Opleidingen</h3>
-        <p>
-          <strong>Matric, Dramatic Arts, Art and History jan 2014 - jan 2015</strong><br>
-          Allen Glen
+      <div>
+        <p class="eyebrow">Public CV</p>
+        <h1>Garth Baker</h1>
+        <p class="role">Senior Laravel Full-Stack Engineer and Senior WordPress Developer</p>
+        <p class="summary">
+          Full stack software engineer based in the Netherlands, strongest in Laravel, PHP, MySQL, JavaScript, and practical business software. I build systems that connect product thinking, clean delivery, deployment, documentation, and long-term ownership.
         </p>
-        <p>
-          <strong>History, Art, Life Science/Biology jan 2011 - jan 2013</strong><br>
-          Fourways High
-        </p>
+        <div class="quick-facts" aria-label="Summary">
+          <span class="fact">Netherlands</span>
+          <span class="fact">Professional development since 2016</span>
+          <span class="fact">Laravel first</span>
+          <span class="fact">Senior WordPress</span>
+          <span class="fact">Product builder</span>
+        </div>
       </div>
+    </header>
 
-      <div class="section">
-        <h3>Werkervaring</h3>
-        <p>
-          <span class="job-title">Full Stack Engineer aug 2024</span><br>
-          TJIP The Platform Engineer, Netherlands<br><br>
-          Working at Tjip has exceeded my expectations in every way. I am fortunate to work under outstanding leadership, with a manager who truly sets the standard. The team I am part of is composed of incredibly talented developers, and I feel inspired and motivated to contribute to this exceptional group.
-        </p>
-        <p>
-          Though my time with Tjip has just begun, I can already see a future here, where I aim to advance and grow alongside this team. My role at Tjip aligns deeply with my passion for the work I do. The company has given me the space to bring my authentic self to the table, empowering me to make decisions and take ownership based on the very skills they hired me for. When asked for my input, I know it’s genuinely valued and considered.
-        </p>
-        <p>
-          This environment makes my work not just a job, but a truly fulfilling experience. I look forward to each day, knowing I have the opportunity to tackle meaningful challenges and make a real impact. This sense of purpose fuels my ambition and strengthens my commitment to contributing to Tjip's continued success and growth.
-        </p>
-        <p>
-          <span class="job-title">Consultant Contract - Flutter &amp; Dart developer apr 2024 - mei 2024</span><br>
-          CoverWeb.online, Johannesburg<br><br>
-          Contracting for DigiData was a tough challenge coming to terms with their infrastructure but overall a good experience working with them. I contracted for 2 months and then did a handover and offered support transitioning their system to a new developer. I essentially oversaw the transition for their app from the previous developer and performed a system analysis along with some deployments.
-        </p>
-        <p>
-          <span class="job-title">Consultant Contract - Full Stack Developer - Laravel (LAMP Stack)</span><br>
-          jun 2023 - mrt 2024<br>
-          CoverWeb.online, City of Johannesburg, Gauteng, South Africa<br><br>
-          Overview: Engaged in a challenging contract with Qinisa, tasked with overhauling a legacy system plagued by performance issues, resulting from 19 years of compounded development and an outdated database.
-        </p>
-        <p>
-          Contributions and Achievements:<br>
-          - Integrated three separate systems into a cohesive unit over 10 months, enhancing efficiency.<br>
-          - Dramatically improved screen load times by rearchitecting the system.<br>
-          - Established robust development pipelines across three environments (Development, Pre-Production, Production) and streamlined server and domain costs.<br>
-          - Advocated for best practices including documentation, weekly training, and feature tracking, despite client resistance.
-        </p>
-        <p>
-          Challenges: Faced significant obstacles due to sole developer status, communication issues, and client reluctance towards new processes. The contract was marked by a lack of support for development tracking, documentation, and system training.
-        </p>
-        <p>
-          Conclusion: Despite the difficulties, I maintained a professional approach, contributing significantly to Qinisa's operational capabilities through technical improvements and cost optimizations. This experience underscored the importance of communication, documentation, and stakeholder engagement.
-        </p>
-        <p>
-          Reflection: This contract highlighted my commitment to excellence and efficiency in the face of adversity, enhancing my technical and managerial skills.
-        </p>
-        <p>
-          <span class="job-title">Consultant Contract - WordPress developer mei 2023 - mei 2023</span><br>
-          CoverWeb.online<br><br>
-          Project Overview: Managed the development and ongoing updates of a WordPress website for a non-profit organization, resulting from the merger of Common-Unity and Forward for Life. The project involved creating a platform to reflect the combined mission and values.
-        </p>
-        <p>
-          Contributions and Achievements:<br>
-          - Project Management: Successfully managed the end-to-end process, ensuring timely delivery and high quality.<br>
-          - Client Satisfaction: Ongoing website management with consistently positive client feedback.<br>
-          - Efficiency and Quality: Leveraged standard tools and plugins to streamline development.
-        </p>
-        <p>
-          Conclusion: The successful launch and management of the website demonstrate my ability to lead and execute web projects effectively, ensuring both operational efficiency and client satisfaction.
-        </p>
-        <p>
-          Reflection: This project highlights my skills in project management, client service, and technical execution.
-        </p>
-        <p>
-          <span class="job-title">Consultant Contract - WordPress Developer nov 2022 - apr 2023</span><br>
-          CoverWeb.online<br><br>
-          Overview: My contract role at ALT Agency involved standard WordPress projects in a fast-paced environment, including staff training and project management.
-        </p>
-        <p>
-          Contributions and Achievements:<br>
-          - Training and Guidance: Conducted staff training to enhance WordPress skills.<br>
-          - Project Scoping: Provided clarity and direction for each project.<br>
-          - Process Improvement: Implemented changes to accelerate the development cycle.<br>
-          - Innovation: Introduced new tools for design and deployment.
-        </p>
-        <p>
-          Challenges: A focus on quantity over quality led to compromised outcomes.
-        </p>
-        <p>
-          Conclusion: Despite challenges, I contributed positively by streamlining processes and enhancing team skills, ultimately uplifting work quality and client service.
-        </p>
-        <p>
-          Reflection: This role underscored the importance of balancing efficiency with quality and customer care.
-        </p>
-      </div>
+    <div class="layout">
+      <aside class="side">
+        <section class="panel">
+          <h2>Contact</h2>
+          <ul class="contact-list">
+            <li><strong>Email</strong><br /><a href="mailto:13garthbaker@gmail.com">13garthbaker@gmail.com</a></li>
+            <li><strong>Location</strong><br />Almere, Netherlands</li>
+            <li><strong>LinkedIn</strong><br /><a href="https://www.linkedin.com/in/13garth">linkedin.com/in/13garth</a></li>
+            <li><strong>GitHub</strong><br /><a href="https://github.com/13garth">github.com/13garth</a></li>
+          </ul>
+        </section>
 
-      <!-- PAGE BREAK -->
-      <div class="page-break"></div>
+        <section class="panel">
+          <h2>Core Stack</h2>
+          <div class="chips">
+            <span class="chip">PHP</span>
+            <span class="chip">Laravel</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">MariaDB</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">jQuery</span>
+            <span class="chip">Vue.js</span>
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS</span>
+            <span class="chip">Bootstrap</span>
+          </div>
+        </section>
 
-      <!-- PAGE 2 CONTENT -->
-      <div class="section">
-        <p>
-          <strong>Full Stack Developer - Laravel (LAMP Stack + AWS) &amp; Flutter and Dart Developer</strong><br>
-          jun 2021 - nov 2022<br>
-          E-Centive, City of Johannesburg, Gauteng, South Africa
-        </p>
-        <p>
-          <strong>Role and Environment:</strong> At E-Centive, I work in a supportive, collaborative environment that fosters my passion for development. The company culture emphasizes learning and growth, allowing me to tackle challenging tasks that enhance my problem-solving skills and technical knowledge.
-        </p>
-        <p>
-          <strong>Contributions and Skill Development:</strong><br>
-          - Full Stack Development: Proficient with Laravel and Vue for comprehensive solutions.<br>
-          - Mobile App Development: Developed applications using Flutter and Dart.<br>
-          - DevOps and Cloud Services: Gained practical experience in deploying web and app solutions via Amazon Web Services.
-        </p>
-        <p>
-          <strong>Professional Growth:</strong> E-Centive has been instrumental in shaping me into a versatile programmer. The opportunity to work on meaningful projects has been highly fulfilling and has expanded my technical expertise.
-        </p>
-        <p>
-          <strong>Reflection:</strong> My time at E-Centive is a cornerstone of my professional journey, characterized by continuous learning and growth.
-        </p>
-        <p>
-          <strong>Full Stack Developer - Custom internally built PHP (OOP) Framework</strong><br>
-          okt 2020 - mei 2021<br>
-          Imagin8 (SA), Bedfordview, Gauteng, South Africa
-        </p>
-        <p>
-          <strong>Project Overview:</strong> I played a pivotal role in developing SMExpert.co.za from its inception, laying the foundational elements and significantly contributing to its architecture.
-        </p>
-        <p>
-          <strong>Team Collaboration and Environment:</strong><br>
-          - Collaborated with a dedicated team of five developers, fostering a productive environment.<br>
-          - Overcame challenges that provided unique opportunities for growth in problem-solving and project management.
-        </p>
-        <p>
-          <strong>Mentorship and Growth:</strong><br>
-          - Benefited from the mentorship of Adam Rabinowitz, whose business acumen and insights were invaluable.<br>
-          - This project greatly enhanced my technical skills and understanding of web development from a business perspective.
-        </p>
-        <p>
-          <strong>Conclusion:</strong> My tenure at Imagin8 was defining, refining my technical abilities and enriching my business understanding through strong mentorship and team collaboration.
-        </p>
-      </div>
+        <section class="panel">
+          <h2>WordPress</h2>
+          <ul class="plain-list">
+            <li>Custom themes and templates</li>
+            <li>Custom plugins and admin workflows</li>
+            <li>WooCommerce and content-heavy sites</li>
+            <li>Migration, recovery, hosting, and handover</li>
+          </ul>
+        </section>
 
-      <!-- PAGE BREAK -->
-      <div class="page-break"></div>
+        <section class="panel">
+          <h2>Expanding Range</h2>
+          <div class="chips">
+            <span class="chip">C#</span>
+            <span class="chip">ASP.NET</span>
+            <span class="chip">Blazor</span>
+            <span class="chip">Flutter</span>
+            <span class="chip">Dart</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Docker</span>
+            <span class="chip">GitHub Actions</span>
+            <span class="chip">Linux</span>
+            <span class="chip">IIS</span>
+          </div>
+        </section>
+      </aside>
 
-      <!-- PAGE 3 CONTENT -->
-      <div class="section">
-        <p>
-          <strong>Full Stack OutSystems Developer for Web - I was their sole OutSystems web developer for 2 years</strong><br>
-          sep 2018 - sep 2020<br>
-          Clientele Limited, Johannesburg Area, South Africa
-        </p>
-        <p>
-          <strong>Role and Achievements:</strong> I engaged in comprehensive website development covering both front-end and back-end services, deepening my expertise in modern development practices—particularly through extensive use of API services via Postman.
-        </p>
-        <p>
-          <strong>Development and Learning:</strong><br>
-          - Enhanced my capabilities with advanced web technologies.<br>
-          - Collaborated with a team of exceptionally talented developers, greatly expanding my technical knowledge.
-        </p>
-        <p>
-          <strong>Professional Growth:</strong> The role challenged me to push the boundaries of my abilities, providing invaluable learning experiences.
-        </p>
-        <p>
-          <strong>Conclusion:</strong> My tenure at Clientele was a defining phase in my career, equipping me with a broad spectrum of technical skills that will benefit me in future endeavors.
-        </p>
-      </div>
+      <div>
+        <section class="section">
+          <div class="section-header">
+            <h2>Professional Profile</h2>
+          </div>
+          <p>
+            I specialize in Laravel full-stack engineering: business systems, APIs, admin panels, reporting workflows, billing tools, deployments, and maintainable PHP/MySQL applications. My strongest work happens where product decisions, user workflows, backend design, and operational reliability meet.
+          </p>
+          <p>
+            WordPress is a senior delivery skill for me. It is not my main product focus, but I can use it deeply when it is the right tool, including custom builds, theme and plugin work, migrations, troubleshooting, performance fixes, hosting handovers, and client-ready delivery.
+          </p>
+          <p>
+            I have worked across corporate teams, agency-style delivery, consulting, legacy modernization, mobile handover support, and product ideas. I value clear ownership, practical documentation, clean deployments, and software that solves real operational problems.
+          </p>
+        </section>
 
-      <!-- PAGE BREAK -->
-      <div class="page-break"></div>
+        <section class="section">
+          <h2>Engineering Focus</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>Laravel Full Stack</h3>
+              <ul>
+                <li>Laravel apps, APIs, queues, jobs, auth, billing, and reports</li>
+                <li>MySQL/MariaDB data modeling and query work</li>
+                <li>Admin dashboards and internal operations tools</li>
+                <li>Deployment workflows, GitHub Actions, VPS, and shared hosting</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Product Builder</h3>
+              <ul>
+                <li>SaaS-style tools and paid product ideas</li>
+                <li>Billing, invoicing, budgeting, and customer workflows</li>
+                <li>Reusable utilities that reduce repeated development work</li>
+                <li>Practical business software with clear handover paths</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Delivery and Operations</h3>
+              <ul>
+                <li>Requirements, wireframes, frontend, backend, and deployment</li>
+                <li>Documentation, support, training, and ownership transfer</li>
+                <li>Legacy modernization and performance improvement</li>
+                <li>API integration, Postman workflows, and server administration</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Learning Edge</h3>
+              <ul>
+                <li>C#, ASP.NET, and Blazor in current professional work</li>
+                <li>Flutter and Dart when mobile delivery makes sense</li>
+                <li>Careful AI-assisted development with real understanding</li>
+                <li>Continuous improvement without losing delivery focus</li>
+              </ul>
+            </article>
+          </div>
+        </section>
 
-      <!-- PAGE 4 CONTENT -->
-      <div class="section">
-        <p>
-          <strong>Full Stack Developer - WordPress &amp; Laravel (LAMP Stack)</strong><br>
-          jan 2017 - aug 2018<br>
-          WebFootprint
-        </p>
-        <p>
-          At WebFootprint, I specialized in creating personalized websites tailored to the needs of both small and large businesses. My projects spanned online shops, contact websites, and custom solutions such as JavaScript calendars integrated with WordPress.
-        </p>
-        <p>
-          <strong>Contributions and Achievements:</strong><br>
-          - Adapted quickly to new challenges by learning skills on the go.<br>
-          - Grew from an intern to a proficient web developer through mentorship and continuous learning.<br>
-          - Delivered a variety of custom web solutions demonstrating versatility and technical proficiency.
-        </p>
-        <p>
-          <strong>Reflection and Gratitude:</strong> My experience at WebFootprint was pivotal, providing a comprehensive toolkit for my career and laying a solid foundation for future endeavors.
-        </p>
-      </div>
+        <section class="section">
+          <h2>Experience</h2>
+          <div class="experience">
+            <article class="job">
+              <div class="job-head">
+                <div>
+                  <p class="job-title">Full Stack Engineer</p>
+                  <p class="company">TJIP The Platform Engineer, Netherlands</p>
+                </div>
+                <div class="dates">Aug 2024 - Present</div>
+              </div>
+              <ul>
+                <li>Contributing as a full stack engineer in a strong product engineering environment.</li>
+                <li>Growing C#, ASP.NET, and Blazor capability while bringing full-stack delivery experience from Laravel, PHP, JavaScript, and business software work.</li>
+                <li>Working with team standards, ownership, review, and maintainable implementation habits.</li>
+              </ul>
+            </article>
 
-      <!-- PAGE BREAK -->
-      <div class="page-break"></div>
+            <article class="job">
+              <div class="job-head">
+                <div>
+                  <p class="job-title">Consultant Contract - Flutter and Dart Developer</p>
+                  <p class="company">CoverWeb.online / DigiData, Johannesburg</p>
+                </div>
+                <div class="dates">Apr 2024 - May 2024</div>
+              </div>
+              <ul>
+                <li>Supported transition of an existing mobile app from a previous developer to a new owner.</li>
+                <li>Performed system analysis, deployment support, and handover guidance.</li>
+                <li>Helped reduce operational risk during a short, focused consulting engagement.</li>
+              </ul>
+            </article>
 
-      <!-- PAGE 5 CONTENT -->
-      <div class="section">
-        <p>
-          <strong>Restaurant Manager nov 2016 - dec 2016</strong><br>
-          Society eatery and craft beer, Merrow down plaza<br>
-          -- Same Owners as Previous Job -- Still work for same owners as panettone café was just moved to one of their busier restaurants as I am more needed at society eatery and craft beer
-        </p>
-        <p>
-          <strong>Restaurant Manager sep 2016 - okt 2016</strong><br>
-          panettone café<br>
-          -- Same Owners as Previous Job --
-        </p>
-        <p>
-          <strong>Restaurant Waiter mei 2016 - aug 2016</strong><br>
-          society Eatery and craft beer<br>
-          In my role as a Restaurant Waiter, I honed my skills in cash handling and store management, which led to my promotion to a managerial position overseeing daily operations and ensuring customer satisfaction.
-        </p>
-        <p>
-          <strong>Restaurant Waiter apr 2016 - mei 2016</strong><br>
-          Murphys law<br>
-          I excelled in providing top-notch customer service, managing tables effectively, and collaborating with the kitchen team to ensure a smooth dining experience. I also implemented upselling strategies to boost revenue and enhance guest satisfaction.
-        </p>
+            <article class="job">
+              <div class="job-head">
+                <div>
+                  <p class="job-title">Consultant Contract - Full Stack Laravel Developer</p>
+                  <p class="company">CoverWeb.online / Qinisa, Johannesburg</p>
+                </div>
+                <div class="dates">Jun 2023 - Mar 2024</div>
+              </div>
+              <ul>
+                <li>Modernized a legacy LAMP system affected by years of compounded development and database issues.</li>
+                <li>Integrated three separate systems into a more cohesive operational workflow.</li>
+                <li>Improved screen load times through architecture and query work.</li>
+                <li>Established development, pre-production, and production deployment pipelines.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <div>
+                  <p class="job-title">Consultant Contract - WordPress Developer</p>
+                  <p class="company">CoverWeb.online</p>
+                </div>
+                <div class="dates">Nov 2022 - May 2023</div>
+              </div>
+              <ul>
+                <li>Delivered and maintained WordPress projects across client, agency, and non-profit contexts.</li>
+                <li>Handled project scoping, staff guidance, custom delivery, client support, and handover.</li>
+                <li>Balanced practical WordPress delivery speed with maintainability and client ownership.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <div>
+                  <p class="job-title">Full Stack Developer - Laravel, AWS, Flutter and Dart</p>
+                  <p class="company">E-Centive, Johannesburg</p>
+                </div>
+                <div class="dates">Jun 2021 - Nov 2022</div>
+              </div>
+              <ul>
+                <li>Built Laravel and Vue.js solutions in a collaborative development environment.</li>
+                <li>Worked on Flutter and Dart mobile applications.</li>
+                <li>Gained practical experience deploying web and app solutions with AWS services.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <div>
+                  <p class="job-title">Full Stack Developer - Custom PHP OOP Framework</p>
+                  <p class="company">Imagin8, Bedfordview</p>
+                </div>
+                <div class="dates">Oct 2020 - May 2021</div>
+              </div>
+              <ul>
+                <li>Contributed to SMExpert.co.za from early development through core architecture work.</li>
+                <li>Collaborated with a five-developer team on custom PHP systems.</li>
+                <li>Strengthened technical, business, and project problem-solving skills.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <div>
+                  <p class="job-title">Full Stack OutSystems Developer for Web</p>
+                  <p class="company">Clientele Limited, Johannesburg</p>
+                </div>
+                <div class="dates">Sep 2018 - Sep 2020</div>
+              </div>
+              <ul>
+                <li>Worked as a dedicated OutSystems web developer across front-end and back-end services.</li>
+                <li>Used API services and Postman workflows in corporate web development.</li>
+                <li>Expanded modern development practice through a strong technical team environment.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <div>
+                  <p class="job-title">Full Stack Developer - WordPress and Laravel</p>
+                  <p class="company">WebFootprint</p>
+                </div>
+                <div class="dates">Jan 2017 - Aug 2018</div>
+              </div>
+              <ul>
+                <li>Built personalized websites, online shops, contact websites, and custom WordPress solutions.</li>
+                <li>Grew from intern-level beginnings into a productive web developer through mentorship and continuous learning.</li>
+                <li>Built a strong foundation across LAMP, WordPress, Laravel, JavaScript, and client delivery.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <div>
+                  <p class="job-title">Early Customer Operations Roles</p>
+                  <p class="company">Society Eatery, Panettone Cafe, Murphys Law</p>
+                </div>
+                <div class="dates">2016</div>
+              </div>
+              <ul>
+                <li>Built early customer service, cash handling, store operations, and management experience before moving fully into software.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Selected Work and Products</h2>
+          <div class="rows">
+            <div class="row"><a href="https://BudgetKicker.com">Budget Kicker</a><span>Personal finance and business billing product thinking: recurring costs, shared expenses, customer invoices, templates, and reporting.</span></div>
+            <div class="row"><a href="https://coverweb.online">CoverWeb</a><span>Hosting, domains, customer workflows, and practical software operations under one brand.</span></div>
+            <div class="row"><a href="https://github.com/13garth/api-status-checker-basic-local">API Status Checker</a><span>Local URL/API/domain health checking utility for operational checks.</span></div>
+            <div class="row"><a href="https://github.com/13garth/bootstrap-re-usable-confirm-modal">Bootstrap Reusable Confirm Modal</a><span>Small reusable UI utility that removes repeated modal code.</span></div>
+            <div class="row"><a href="https://github.com/13garth/php-mysql-connector">PHP MySQL Connector</a><span>Lightweight PHP/MySQL utility work and older LAMP-stack foundations.</span></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Education</h2>
+          <div class="rows">
+            <div class="row"><strong>Allen Glen</strong><span>Matric with Dramatic Arts, Art, and History. 2014 - 2015.</span></div>
+            <div class="row"><strong>Fourways High</strong><span>History, Art, and Life Science/Biology. 2011 - 2013.</span></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Links</h2>
+          <div class="rows">
+            <div class="row"><strong>Full CV</strong><a href="https://13garth.github.io">13garth.github.io</a></div>
+            <div class="row"><strong>GitHub profile page</strong><a href="https://13garth.github.io/13garth">13garth.github.io/13garth</a></div>
+            <div class="row"><strong>GitHub</strong><a href="https://github.com/13garth">github.com/13garth</a></div>
+            <div class="row"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/13garth">linkedin.com/in/13garth</a></div>
+            <div class="row"><strong>Stack Overflow</strong><a href="https://stackoverflow.com/users/8125278/13garth">stackoverflow.com/users/8125278/13garth</a></div>
+            <div class="row"><strong>Budget Kicker</strong><a href="https://BudgetKicker.com">BudgetKicker.com</a></div>
+            <div class="row"><strong>CoverWeb</strong><a href="https://coverweb.online">coverweb.online</a></div>
+          </div>
+        </section>
+
+        <footer class="section footer">
+          Build useful software. Keep improving it.
+        </footer>
       </div>
     </div>
-  </div>
-
-  <!-- Google Translate Script -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'nl',
-        autoDisplay: false,
-        includedLanguages: 'nl,en',
-        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-      }, 'google_translate_element');
-      // Force the select box to Dutch after the widget loads.
-      setTimeout(function() {
-        var combo = document.querySelector('.goog-te-combo');
-        if (combo) {
-          combo.value = 'nl';
-          combo.dispatchEvent(new Event('change'));
-        }
-      }, 1000);
-    }
-
-    // Also ensure the language is forced once the window fully loads.
-    window.addEventListener("load", function() {
-      var combo = document.querySelector('.goog-te-combo');
-      if (combo) {
-        combo.value = 'nl';
-        combo.dispatchEvent(new Event('change'));
-      }
-    });
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </main>
 </body>
 </html>
