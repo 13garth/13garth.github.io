@@ -6,3 +6,5 @@
 *.pdf
 *.pem
 *.key
+
+!cv/Garth-Baker-CV.pdf

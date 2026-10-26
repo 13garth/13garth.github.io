@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="CV for Garth Baker, a full stack Laravel engineer based in Rotterdam, South Holland, Netherlands." />
-  <title>Garth Baker - CV</title>
+  <meta name="description" content="Garth Baker builds full stack Laravel applications, business workflows, and maintainable software. Explore selected work, architecture, experience, and a downloadable CV." />
+  <title>Garth Baker | Full Stack Engineer &amp; Application Architecture</title>
   <style>
     :root {
       color-scheme: dark;
@@ -461,18 +461,45 @@
         padding: 18px 0;
       }
     }
+
+    .hero > *, .layout > *, .side > * { min-width:0; }
+    .contact-list, .rows { overflow-wrap:anywhere; }
+    .fact { white-space:normal; }
+    @media(max-width:400px) { .hero { padding:22px; } .side { display:block; } .side .panel { margin-bottom:16px; } }
+    .download-button { display:inline-flex; gap:14px; align-items:center; background:#58a6ff; color:#080d16; padding:11px 17px; border-radius:10px; font-size:.9rem; }
+    .download-button:hover { background:#8cc4ff; text-decoration:none; }
+    .print-button { margin-left:auto; }
+    .nav { flex:1; }
+    .skip-link { position:absolute; left:16px; top:-100px; padding:12px; background:#fff; color:#080d16; z-index:20; }
+    .skip-link:focus { top:12px; }
+    a:focus-visible, button:focus-visible { outline:3px solid #f59e0b; outline-offset:5px; }
+    [id] { scroll-margin-top:24px; }
+    .case-list { display:grid; gap:16px; }
+    .case-card { padding:22px; border:1px solid var(--line); border-left:3px solid var(--cyan); border-radius:12px; background:linear-gradient(120deg,#121f34,#0f172a); }
+    .case-card h3 { margin:4px 0 12px; font-size:1.35rem; }
+    .case-card p { margin-bottom:12px; }
+    .case-label { color:var(--cyan); font-size:.76rem; text-transform:uppercase; font-weight:800; letter-spacing:.08em; }
+    .case-stack { color:#b9cce5; font-size:.83rem; margin-bottom:0!important; }
+    .section-intro { color:var(--muted); }
+    .card p { margin-bottom:0; color:var(--muted); }
+    @media(max-width:640px) { .topbar { gap:14px; } .nav { flex-basis:100%; } .print-button { margin-left:0; } .case-card { padding:18px; } }
+    @media(max-width:880px) { .layout > .side { grid-row:2; } .layout > div { grid-row:1; min-width:0; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print { .download-button,.skip-link { display:none; } .case-card { background:white; color:#111; break-inside:avoid; } .case-label,.case-stack,.section-intro,.card p { color:#333; } }
   </style>
 </head>
 <body>
   <main class="page">
     <div class="topbar">
+      <a class="skip-link" href="#main-content">Skip to content</a>
       <nav class="nav" aria-label="Primary links">
         <a href="https://13garth.github.io" target="_blank" rel="noopener noreferrer">Full CV</a>
-        <a href="https://github.com/13garth" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/13garth" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://BudgetKicker.com" target="_blank" rel="noopener noreferrer">Budget Kicker</a>
-        <a href="https://coverweb.online" target="_blank" rel="noopener noreferrer">CoverWeb</a>
+        <a href="#selected-work">Selected work</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#experience">Experience</a>
+        <a href="https://www.linkedin.com/in/13garth" target="_blank" rel="noopener noreferrer">Contact</a>
       </nav>
+      <a class="download-button" href="cv/Garth-Baker-CV.pdf" download>Download CV <span aria-hidden="true">&#8595;</span></a>
       <button class="print-button" type="button" onclick="window.print()" aria-label="Print or save this CV as PDF">
         Print / PDF
       </button>
@@ -483,17 +510,16 @@
         <img src="images/garth-baker-profile.jpg" alt="" />
       </div>
       <div>
-        <p class="eyebrow">Public CV</p>
+        <p class="eyebrow">Full stack development / Application architecture</p>
         <h1>Garth Baker</h1>
-        <p class="role">Full Stack Laravel Engineer</p>
+        <p class="role">Useful software. Thoughtful architecture.</p>
         <p class="summary">
-          Full stack software engineer based in Rotterdam, South Holland. I am strongest in Laravel, PHP, MySQL, JavaScript, and practical business software, with current professional exposure to Microsoft systems, .NET, C#, Azure cloud hosting, CI/CD, and resilient platform work.
+          I build business applications from the data model to the interface and deployment. Laravel, PHP, MySQL, and JavaScript are my core stack, with hands-on work across .NET, cloud platforms, integrations, and the decisions that keep a system maintainable.
         </p>
         <div class="quick-facts" aria-label="Summary">
           <span class="fact">Rotterdam, South Holland</span>
           <span class="fact">Professional development since 2016</span>
           <span class="fact">Laravel first</span>
-          <span class="fact">Certified Problem Solver</span>
           <span class="fact">Cloud and CI/CD</span>
           <span class="fact">Senior WordPress</span>
           <span class="fact">Product builder</span>
@@ -501,7 +527,7 @@
       </div>
     </header>
 
-    <div class="layout">
+    <div class="layout" id="main-content">
       <aside class="side">
         <section class="panel">
           <h2>Contact</h2>
@@ -596,6 +622,46 @@
       </aside>
 
       <div>
+        <section class="section" aria-labelledby="selected-work">
+          <p class="eyebrow">From idea to running software</p>
+          <h2 id="selected-work">Selected work</h2>
+          <p class="section-intro">Products and projects that show how I connect business workflows, data, interfaces, and operations. Product sites are public; application source is private.</p>
+          <div class="case-list">
+            <article class="case-card">
+              <p class="case-label">01 / Financial workflows</p>
+              <h3><a href="https://budgetkicker.com" target="_blank" rel="noopener noreferrer">Budget Kicker <span aria-hidden="true">&#8599;</span></a></h3>
+              <p>Budgeting and invoicing software that brings clients, products, recurring costs, and payment workflows into one application.</p>
+              <p><strong>Engineering focus:</strong> relational data models, invoice documents, authenticated customer journeys, subscription integration, and deployment automation.</p>
+              <p class="case-stack">Laravel · PHP · MySQL · JavaScript · Stripe integration · GitHub Actions</p>
+            </article>
+            <article class="case-card">
+              <p class="case-label">02 / Hosting and service operations</p>
+              <h3><a href="https://coverweb.online" target="_blank" rel="noopener noreferrer">CoverWeb <span aria-hidden="true">&#8599;</span></a></h3>
+              <p>Hosting and domain management with customer-facing workflows and administration tools for day-to-day service delivery.</p>
+              <p><strong>Engineering focus:</strong> service boundaries around provider APIs, domain and hosting operations, administrative interfaces, and maintainable Laravel modules.</p>
+              <p class="case-stack">Laravel · PHP · MySQL · REST APIs · WordPress · Hosting operations</p>
+            </article>
+            <article class="case-card">
+              <p class="case-label">03 / Content and internal tools</p>
+              <h3>Content platforms and developer tooling</h3>
+              <p>Current private work spans a Laravel CMS and tools for organizing software projects and development workflows.</p>
+              <p><strong>Engineering focus:</strong> structured content, reusable administration, permissions, editor interfaces, and application state. Separate .NET work extends into ASP.NET Core and Entity Framework.</p>
+              <p class="case-stack">Laravel · JavaScript · C# · ASP.NET Core · Entity Framework</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="architecture">
+          <p class="eyebrow">How I approach a system</p>
+          <h2 id="architecture">Architecture that serves the product</h2>
+          <div class="grid">
+            <article class="card"><h3>Start with the workflow</h3><p>Understand who uses the system, what they need to accomplish, and which data must stay consistent. Make those relationships explicit before adding complexity.</p></article>
+            <article class="card"><h3>Keep boundaries clear</h3><p>Separate interface concerns, business rules, persistence, and external integrations so a change in one area is easier to reason about and test.</p></article>
+            <article class="card"><h3>Design for operation</h3><p>Consider authentication, permissions, failure handling, deployment, and support alongside the feature. A useful system needs a practical path to being run and maintained.</p></article>
+            <article class="card"><h3>Deliver, then improve</h3><p>Build an understandable first version, verify important behavior, and refine the parts that need it. Leave clear documentation and ownership for the next person.</p></article>
+          </div>
+        </section>
+
         <section class="section">
           <div class="section-header">
             <h2>Professional Profile</h2>
@@ -658,7 +724,7 @@
         </section>
 
         <section class="section">
-          <h2>Experience</h2>
+          <h2 id="experience">Experience</h2>
           <div class="experience">
             <article class="job">
               <div class="job-head">
@@ -803,18 +869,7 @@
           </div>
         </section>
 
-        <section class="section">
-          <h2>Selected Work and Products</h2>
-          <div class="rows">
-            <div class="row"><a href="https://BudgetKicker.com" target="_blank" rel="noopener noreferrer">Budget Kicker</a><span>Personal finance and business billing product thinking: recurring costs, shared expenses, customer invoices, templates, and reporting.</span></div>
-            <div class="row"><a href="https://coverweb.online" target="_blank" rel="noopener noreferrer">CoverWeb</a><span>Hosting, domains, customer workflows, and practical software operations under one brand.</span></div>
-            <div class="row"><strong>API Status Checker</strong><span>Local URL, API, and domain health-checking utility for operational checks; source repository is private.</span></div>
-            <div class="row"><strong>Bootstrap Reusable Confirm Modal</strong><span>Reusable Bootstrap UI utility that removes repeated confirmation-modal code; source repository is private.</span></div>
-            <div class="row"><a href="https://github.com/13Garth-Blog/laravel-quick-start-template-bootstrap-with-standard-auth/blob/main/README.md" target="_blank" rel="noopener noreferrer">Laravel Quick Start Bootstrap Template</a><span>Personal clean-slate Laravel CLI quick-start guide with standard authentication.</span></div>
-          </div>
-        </section>
-
-        <section class="section">
+<section class="section">
           <h2>Licenses and Certifications</h2>
           <div class="rows">
             <div class="row"><strong>C# and .NET Essential Training</strong><span>LinkedIn Learning, issued May 2025.</span></div>
