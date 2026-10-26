@@ -1,0 +1,8 @@
+
+# Keep private exports and local metadata out of the public repository.
+.DS_Store
+.env
+.env.*
+*.pdf
+*.pem
+*.key
